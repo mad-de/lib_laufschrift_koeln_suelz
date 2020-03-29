@@ -3,16 +3,23 @@
 
 import datetime
 import random
+import json
+from urllib import urlopen
 
 def return_command_array():
+    # DATES
     now = datetime.datetime.now()
     timestamp_kontaktverbot = 1584831600
     beginn_kontaktverbot = datetime.datetime.fromtimestamp(timestamp_kontaktverbot)
 
     diff_days_kontaktverbot = abs((now - beginn_kontaktverbot).days)
     now = datetime.datetime.now()
-
-
+    
+    # WEATHER
+    json_weather_url = urlopen('http://api.openweathermap.org/data/2.5/weather?q=cologne&appid=0425f15e65bc996e74e9f9d0583cda12&units=metric&lang=de')
+    json_weather = json.loads(json_weather_url.read())
+    
+    # TEXTE
     # Ab hier die einzelnen Zeilen ändern / oder oben unter "command_array = [" eine neue hinzufügen. Ticker aktualisiert nach jedem Merge automatisch.
     # Beispiel:
     # 'Meine Nachricht',
@@ -20,6 +27,7 @@ def return_command_array():
     command_array = [
     'Heute ist der ' + str(now.day) + '.' + str(now.month) + '.' + str(now.year) + ' Es ist ' + str(now.hour) + ' Uhr ' + str(now.minute),
     'Heute ist der ' + str(diff_days_kontaktverbot) + '. Tag des Kontaktverbots in NRW und bundesweit.',     
+    'Aktuelle Temperatur: ' + str(json_weather[u'main'][u'temp']) + '°C. Gefühlte Temperatur: ' + str(json_weather[u'main'][u'feels_like']) + '°C. Es ist ' +  str(json_weather[u'weather'][0][u'description'].encode('utf-8')) + '.'
     'Bleibt zuhause und bleibt gesund!',
     'Wir sitzen alle im selben Boot (zuhause) und aus Langeweile haben wir eine LED Laufschrift gebastelt :).', 
     'Unterstützt eure lokalen Geschäfte in dieser Zeit. Ihr wollt etwas lesen oder braucht eine DVD? Bestellt doch zum Beispiel über der-andere-buchladen-koeln@t-online.de.',
