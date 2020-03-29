@@ -25,9 +25,9 @@ def return_command_array():
     # 'Meine Nachricht',
     
     command_array = [
+    'Aktuelle Temperatur ' + str(json_weather[u'main'][u'temp']).replace('-', u'\u002D').encode('utf-8') + '°C. Gefühlte Temperatur ' + str(json_weather[u'main'][u'feels_like']).replace('-', u'\u002D').encode('utf-8') + '°C. Es ist ' +  str(json_weather[u'weather'][0][u'description'].encode('utf-8')) + '.'
     'Heute ist der ' + str(now.day) + '.' + str(now.month) + '.' + str(now.year) + '. Es ist ' + str(now.hour) + ' Uhr ' + str(now.minute),
     'Heute ist der ' + str(diff_days_kontaktverbot) + '. Tag des Kontaktverbots in NRW und bundesweit.',     
-    'Aktuelle Temperatur: ' + str(json_weather[u'main'][u'temp']).replace('-', u'\u002D').encode('utf-8') + '°C. Gefühlte Temperatur: ' + str(json_weather[u'main'][u'feels_like']).replace('-', u'\u002D').encode('utf-8') + '°C. Es ist ' +  str(json_weather[u'weather'][0][u'description'].encode('utf-8')) + '.'
     'Bleibt zuhause und bleibt gesund!',
     'Wir sitzen alle im selben Boot (zuhause) und aus Langeweile haben wir eine LED Laufschrift gebastelt :).', 
     'Unterstützt eure lokalen Geschäfte in dieser Zeit. Ihr wollt etwas lesen oder braucht eine DVD? Bestellt doch zum Beispiel über der-andere-buchladen-koeln@t-online.de.',
@@ -39,5 +39,5 @@ def return_command_array():
     'Tolle von uns getestete, kostenlose Spiele für einen Remote-Spieleabend mit (ebenfalls isolierten) Freunden: Trickster (App), Drawful 2 (Steam). Viel Spass beim Ausprobieren!',
     'Ihr braucht aktuell jemanden, der für euch einkauft? Ihr wollt Hilfe anbieten? Freiwillige Helfer findet man unter anderem auf https://nebenan.de/corona oder www.die-einkaufshelden.de Oder ihr schreibt uns per Whatsapp: +44 7537 1818 02 Wir helfen auch gerne!',
     'Eure Nachricht hier anzeigen lassen? https://github.com/mad-de/lib_laufschrift_koeln_suelz/ Oder wollt ihr uns etwas mitteilen? Whatsapp: +44 7537 181802']
-    random.shuffle(command_array)
+    #random.shuffle(command_array)
     return command_array
