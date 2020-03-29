@@ -2,6 +2,8 @@
 # -*- coding: iso-8859-15 -*-
 
 import datetime
+import random
+
 def return_command_array():
     now = datetime.datetime.now()
     timestamp_kontaktverbot = 1584831600
@@ -22,5 +24,7 @@ def return_command_array():
     'Gute Musik ohne Werbung oder Corona-Nachrichten: www.radioparadise.com',
     'Langweilig und Lust auf einen guten Film? Die 10 besten Filme des 21. Jahrhunderts (lt. BBC): 10) No Country for Old Men von Joel Coen and Ethan Coen 9) A Separation von Asghar Farhadi 8) Yi Yi von Edward Yang 7) The Tree of Life von Terrence Malick 6) Eternal Sunshine of the Spotless Mind von Michel Gondry 5) Boyhood von Richard Linklater 4) Spirited Away von Hayao Miyazaki 3) There Will Be Blood von Paul Thomas Anderson 2) In the Mood for Love von Wong Kar-wai 1) Mulholland Drive von David Lynch ... Viel Spass beim Anschauen!',
     'Danke an Alle, die den Laden hier am Laufen halten!', 
-    'Eure Nachricht hier anzeigen lassen? https://github.com/mad-de/lib_laufschrift_koeln_suelz/ Oder wollt ihr uns etwas mitteilen? Whatsapp: +44 7537 181802']
+    'Eure Nachricht hier anzeigen lassen? https://github.com/mad-de/lib_laufschrift_koeln_suelz/ Oder wollt ihr uns etwas mitteilen? Whatsapp: +44 7537 181802',
+    'Tolle von uns getestete Spiele für einen Remote-Spieleabend mit (ebenfalls isolierten) Freunden: Trickster (App), Drawful 2 (Steam)']
+    random.shuffle(command_array)
     return command_array
