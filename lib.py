@@ -25,7 +25,7 @@ def return_command_array():
     # 'Meine Nachricht',
     
     command_array = [
-    'Aktuelle Temperatur ' + str(json_weather[u'main'][u'temp']).replace('-', u'\u002D').encode('utf-8') + '°C. Gefühlte Temperatur ' + str(json_weather[u'main'][u'feels_like']).replace('-', u'\u002D').encode('utf-8') + '°C. Es ist ' +  str(json_weather[u'weather'][0][u'description'].encode('utf-8')) + '.'
+    'Aktuelle Temperatur ' + str(json_weather[u'main'][u'temp']).replace('-', u'\u2212').encode('utf-8') + '°C. Gefühlte Temperatur ' + str(json_weather[u'main'][u'feels_like']).replace('-', u'\u2212').encode('utf-8') + '°C. Es ist ' +  str(json_weather[u'weather'][0][u'description'].encode('utf-8')) + '.'
     'Heute ist der ' + str(now.day) + '.' + str(now.month) + '.' + str(now.year) + '. Es ist ' + str(now.hour) + ' Uhr ' + str(now.minute),
     'Heute ist der ' + str(diff_days_kontaktverbot) + '. Tag des Kontaktverbots in NRW und bundesweit.',     
     'Bleibt zuhause und bleibt gesund!',
