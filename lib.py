@@ -25,6 +25,7 @@ def return_command_array():
 
     newsticker = 'Der Coronavirus-freie Newsfeed präsentiert von newsapi.org: '
 
+    corona_free_int = 0
     for news_i in range(0, 20):
 	    if not (json_news[u'articles'][news_i][u'source'][u'name'] == None):
 		    get_ticker = ' | ' + json_news[u'articles'][news_i][u'source'][u'name'] + ': '
@@ -35,7 +36,6 @@ def return_command_array():
 #	    if not (json_news[u'articles'][news_i][u'content'] == None):
 #		    get_ticker = get_ticker + json_news[u'articles'][news_i][u'content']
 	    
-	    corona_free_int = 0
 	    if not ("CORONA" in get_ticker.upper() or "COVID" in get_ticker.upper()):
 		corona_free_int = corona_free_int + 1
 		if (corona_free_int < 4):
