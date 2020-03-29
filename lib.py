@@ -19,15 +19,35 @@ def return_command_array():
     json_weather_url = urlopen('http://api.openweathermap.org/data/2.5/weather?q=cologne&appid=0425f15e65bc996e74e9f9d0583cda12&units=metric&lang=de')
     json_weather = json.loads(json_weather_url.read())
     
+    # NEWS
+    json_news_url = urlopen('http://newsapi.org/v2/top-headlines?country=de&apiKey=2d9859f0514247a596b6eb020e0a81fe')
+    json_news = json.loads(json_news_url.read())
+
+    newsticker = 'Der Coronavirus-freie Newsfeed präsentiert von newsapi.org: '
+
+    for news_i in range(0, 20):
+	    if not (json_news[u'articles'][news_i][u'source'][u'name'] == None):
+		    get_ticker = ' | ' + json_news[u'articles'][news_i][u'source'][u'name'] + ': '
+	    if not (json_news[u'articles'][news_i][u'title'] == None):
+		    get_ticker = get_ticker + json_news[u'articles'][news_i][u'title'] + ' '
+	    if not (json_news[u'articles'][news_i][u'description'] == None):
+		    get_ticker = get_ticker + json_news[u'articles'][news_i][u'description']
+#	    if not (json_news[u'articles'][news_i][u'content'] == None):
+#		    get_ticker = get_ticker + json_news[u'articles'][news_i][u'content']
+
+	    if not ("CORONA" in get_ticker.upper() OR "COVID" in get_ticker.upper()):
+		    newsticker = newsticker + get_ticker.encode('utf-8')
+            
     # TEXTE
     # Ab hier die einzelnen Zeilen ändern / oder oben unter "command_array = [" eine neue hinzufügen. Ticker aktualisiert nach jedem Merge automatisch.
     # Beispiel:
     # 'Meine Nachricht',
     
     command_array = [
+    newsticker,
     'Aktuelle Temperatur ' + str(json_weather[u'main'][u'temp']).replace('-', u'\u2212').encode('utf-8') + '°C. Gefühlte Temperatur ' + str(json_weather[u'main'][u'feels_like']).replace('-', u'\u2212').encode('utf-8') + '°C. Es ist ' +  str(json_weather[u'weather'][0][u'description'].encode('utf-8')) + '.',
     'Heute ist der ' + str(now.day) + '.' + str(now.month) + '.' + str(now.year) + '. Es ist ' + str(now.hour) + ' Uhr ' + str(now.minute),
-    'Heute ist der ' + str(diff_days_kontaktverbot) + '. Tag des Kontaktverbots in NRW und bundesweit.',     
+    'Heute ist der ' + str(diff_days_kontaktverbot) + '. Tag des Kontaktverbots in NRW und bundesweit.',  
     'Bleibt zuhause und bleibt gesund!',
     'Wir sitzen alle im selben Boot (zuhause) und aus Langeweile haben wir eine LED Laufschrift gebastelt :).', 
     'Unterstützt eure lokalen Geschäfte in dieser Zeit. Ihr wollt etwas lesen oder braucht eine DVD? Bestellt doch zum Beispiel über der-andere-buchladen-koeln@t-online.de.',
@@ -39,5 +59,5 @@ def return_command_array():
     'Tolle von uns getestete, kostenlose Spiele für einen Remote-Spieleabend mit (ebenfalls isolierten) Freunden: Trickster (App), Drawful 2 (Steam). Viel Spass beim Ausprobieren!',
     'Ihr braucht aktuell jemanden, der für euch einkauft? Ihr wollt Hilfe anbieten? Freiwillige Helfer findet man unter anderem auf https://nebenan.de/corona oder www.die-einkaufshelden.de Oder ihr schreibt uns per Whatsapp: +44 7537 1818 02 Wir helfen auch gerne!',
     'Eure Nachricht hier anzeigen lassen? https://github.com/mad-de/lib_laufschrift_koeln_suelz/ Oder wollt ihr uns etwas mitteilen? Whatsapp: +44 7537 181802']
-    random.shuffle(command_array)
+    #random.shuffle(command_array)
     return command_array
