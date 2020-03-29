@@ -13,7 +13,10 @@ def return_command_array():
     now = datetime.datetime.now()
 
 
-    # Ab hier die einzelnen Zeilen ändern. Ticker aktualisiert nach jedem Merge automatisch.
+    # Ab hier die einzelnen Zeilen ändern / oder oben unter "command_array = [" eine neue hinzufügen. Ticker aktualisiert nach jedem Merge automatisch.
+    # Beispiel:
+    # 'Meine Nachricht',
+    
     command_array = [
     'Heute ist der ' + str(now.day) + '.' + str(now.month) + '.' + str(now.year) + ' Es ist ' + str(now.hour) + ' Uhr ' + str(now.minute),
     'Heute ist der ' + str(diff_days_kontaktverbot) + '. Tag des Kontaktverbots in NRW und bundesweit.',     
