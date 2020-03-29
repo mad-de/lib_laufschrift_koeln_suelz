@@ -35,7 +35,7 @@ def return_command_array():
 #	    if not (json_news[u'articles'][news_i][u'content'] == None):
 #		    get_ticker = get_ticker + json_news[u'articles'][news_i][u'content']
 
-	    if not ("CORONA" in get_ticker.upper() OR "COVID" in get_ticker.upper()):
+	    if not ("CORONA" in get_ticker.upper() or "COVID" in get_ticker.upper()):
 		    newsticker = newsticker + get_ticker.encode('utf-8')
             
     # TEXTE
