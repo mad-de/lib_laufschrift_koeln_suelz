@@ -13,7 +13,7 @@ def return_command_array():
 
     # Ab hier die einzelnen Zeilen ändern. Ticker aktualisiert nach jedem Merge automatisch.
     command_array = [
-    'Heute ist der ' + str(now.day) + '.' + str(now.month) + '.' + str(now.year) + ' Es ist ' + str(now.hour) + 'Uhr' + str(now.minute),
+    'Heute ist der ' + str(now.day) + '.' + str(now.month) + '.' + str(now.year) + ' Es ist ' + str(now.hour) + ' Uhr ' + str(now.minute),
     'Heute ist der ' + str(diff_days_kontaktverbot) + '. Tag des Kontaktverbots in NRW und bundesweit.',     
     'Bleibt zuhause und bleibt gesund!',
     'Wir sitzen alle im selben Boot (zuhause) und aus Langeweile haben wir eine LED Laufschrift gebastelt :).', 
