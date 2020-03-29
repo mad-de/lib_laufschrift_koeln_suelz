@@ -27,7 +27,7 @@ def return_command_array():
     command_array = [
     'Heute ist der ' + str(now.day) + '.' + str(now.month) + '.' + str(now.year) + '. Es ist ' + str(now.hour) + ' Uhr ' + str(now.minute),
     'Heute ist der ' + str(diff_days_kontaktverbot) + '. Tag des Kontaktverbots in NRW und bundesweit.',     
-    'Aktuelle Temperatur: ' + str(json_weather[u'main'][u'temp']).replace('-', u'\u002D') + '°C. Gefühlte Temperatur: ' + str(json_weather[u'main'][u'feels_like']).replace('-', u'\u002D') + '°C. Es ist ' +  str(json_weather[u'weather'][0][u'description'].encode('utf-8')) + '.'
+    'Aktuelle Temperatur: ' + str(json_weather[u'main'][u'temp']).replace('-', u"\u002D") + '°C. Gefühlte Temperatur: ' + str(json_weather[u'main'][u'feels_like']).replace('-', u"\u002D") + '°C. Es ist ' +  str(json_weather[u'weather'][0][u'description'].encode('utf-8')) + '.'
     'Bleibt zuhause und bleibt gesund!',
     'Wir sitzen alle im selben Boot (zuhause) und aus Langeweile haben wir eine LED Laufschrift gebastelt :).', 
     'Unterstützt eure lokalen Geschäfte in dieser Zeit. Ihr wollt etwas lesen oder braucht eine DVD? Bestellt doch zum Beispiel über der-andere-buchladen-koeln@t-online.de.',
