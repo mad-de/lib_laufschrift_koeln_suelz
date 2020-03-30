@@ -22,14 +22,14 @@ def return_command_array():
     # NEWS
     json_news_url = urlopen('http://newsapi.org/v2/top-headlines?country=de&apiKey=2d9859f0514247a596b6eb020e0a81fe')
     json_news = json.loads(json_news_url.read())
-    newsticker = 'Der Coronavirus-freie Newsfeed präsentiert von newsapi.org: '
+    newsticker = 'Der Coronavirus-freie Newsfeed mit Hilfe von newsapi.org: '
 
     corona_free_int = 0
     for news_i in range(0, 20):
 	    if not (json_news[u'articles'][news_i][u'source'][u'name'] == None):
-		    get_ticker = ' | ' + json_news[u'articles'][news_i][u'source'][u'name'] + ': '
+		    get_ticker = ' +++ ' + json_news[u'articles'][news_i][u'source'][u'name'] + ': '
 	    if not (json_news[u'articles'][news_i][u'title'] == None):
-		    get_ticker = get_ticker + json_news[u'articles'][news_i][u'title'] + ' '
+		    get_ticker = get_ticker + json_news[u'articles'][news_i][u'title'] + '. '
 	    if not (json_news[u'articles'][news_i][u'description'] == None):
 		    get_ticker = get_ticker + json_news[u'articles'][news_i][u'description']
 #	    if not (json_news[u'articles'][news_i][u'content'] == None):
