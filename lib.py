@@ -47,7 +47,7 @@ def return_command_array():
     
     command_array = [
     newsticker,
-    'Das Wetter: ' + str(json_weather[u'weather'][0][u'description'].encode('utf-8')) + ' Aktuelle Temperatur: ' + str(json_weather[u'main'][u'temp']).replace('-', u'\u2212').encode('utf-8') + '°C. Gefühlte Temperatur: ' + str(json_weather[u'main'][u'feels_like']).replace('-', u'\u2212').encode('utf-8') + '°C.',
+    'Das Wetter: ' + str(json_weather[u'weather'][0][u'description'].encode('utf-8')) + '. Aktuelle Temperatur: ' + str(json_weather[u'main'][u'temp']).replace('-', u'\u2212').encode('utf-8') + '°C. Gefühlte Temperatur: ' + str(json_weather[u'main'][u'feels_like']).replace('-', u'\u2212').encode('utf-8') + '°C.',
     'Heute ist der ' + str(datetime.datetime.now().day) + '.' + str(datetime.datetime.now().month) + '.' + str(datetime.datetime.now().year) + '. Es ist ' + str(datetime.datetime.now().hour) + ' Uhr ' + str(datetime.datetime.now().minute),
     'Heute ist der ' + str(diff_days_kontaktverbot) + '. Tag des Kontaktverbots in NRW und bundesweit.',  
     'Bleibt zuhause und bleibt gesund!',
