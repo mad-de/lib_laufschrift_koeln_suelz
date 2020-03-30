@@ -8,7 +8,17 @@ from urllib import urlopen
 
 
 def return_command_array():
+	
+    # GREETINGS
 
+    greeting = 'Guten Morgen!'
+    if datetime.datetime.now().hour > 12 and datetime.datetime.now().hour < 15:
+        greeting = 'Mahlzeit!'
+    if datetime.datetime.now().hour > 14 and datetime.datetime.now().hour < 22:
+        greeting = 'Guten Abend!'
+    if datetime.datetime.now().hour > 21 and datetime.datetime.now().hour < 25:
+        greeting = 'Gute Nacht!'	
+	
     # DATES
 
     now = datetime.datetime.now()
@@ -81,7 +91,7 @@ def return_command_array():
     #
 
     command_array = [
-        'Heute ist der ' + str(datetime.datetime.now().day) + '.'
+        greeting + ' Heute ist der ' + str(datetime.datetime.now().day) + '.'
             + str(datetime.datetime.now().month) + '.'
             + str(datetime.datetime.now().year) + '. Es ist '
             + str(datetime.datetime.now().hour) + ' Uhr '
