@@ -54,7 +54,9 @@ def return_command_array():
         if not ('CORONA' in get_ticker.upper() or 'COVID'
                 in get_ticker.upper() or 'DER WESTEN'
                 in get_ticker.upper() or 'AUSGANGSBESCHR'
-		in get_ticker.upper()):
+		in get_ticker.upper() or 'VIP'
+	       	in get_ticker.upper() or 'BUNTE'
+	       	in get_ticker.upper()):
             corona_free_int = corona_free_int + 1
             if corona_free_int < 4:
                 newsticker = newsticker + get_ticker.encode('utf-8')
@@ -100,12 +102,12 @@ def return_command_array():
             ,
         'Unterst\xc3\xbctzt eure lokalen Gesch\xc3\xa4fte in dieser Zeit. Ihr wollt etwas lesen oder braucht eine DVD? Bestellt doch zum Beispiel \xc3\xbcber der-andere-buchladen-koeln@t-online.de.'
             ,
-        'Viele Restaurants hier im Viertel bieten einen Lieferdienst oder Abholservice z.B. merstonnzesamme.de oder palanta.de'
+        'Viele Restaurants hier im Viertel bieten einen Lieferdienst oder Abholservice z.B. merstonnzesamme.de oder palanta.de. Auf bringsl.com gibt es auch einen Fahrradlieferdienst für Feinkost.'
             ,
         'Auf der Suche nach guter Musik ohne Werbung oder Corona-Nachrichten: www.radioparadise.com'
             ,
-        'Langweilig und Lust auf einen guten Film? Die 10 besten Filme des 21. Jahrhunderts (lt. BBC): 10) No Country for Old Men von Joel Coen and Ethan Coen 9) A Separation von Asghar Farhadi 8) Yi Yi von Edward Yang 7) The Tree of Life von Terrence Malick 6) Eternal Sunshine of the Spotless Mind von Michel Gondry 5) Boyhood von Richard Linklater 4) Spirited Away von Hayao Miyazaki 3) There Will Be Blood von Paul Thomas Anderson 2) In the Mood for Love von Wong Kar-wai 1) Mulholland Drive von David Lynch ... Viel Spass beim Anschauen!'
-            ,
+        #'Langweilig und Lust auf einen guten Film? Die 10 besten Filme des 21. Jahrhunderts (lt. BBC): 10) No Country for Old Men von Joel Coen and Ethan Coen 9) A Separation von Asghar Farhadi 8) Yi Yi von Edward Yang 7) The Tree of Life von Terrence Malick 6) Eternal Sunshine of the Spotless Mind von Michel Gondry 5) Boyhood von Richard Linklater 4) Spirited Away von Hayao Miyazaki 3) There Will Be Blood von Paul Thomas Anderson 2) In the Mood for Love von Wong Kar-wai 1) Mulholland Drive von David Lynch ... Viel Spass beim Anschauen!'
+        #    ,
         'Was soll man nur kochen? Wie w\xc3\xa4re es mit '
             + rezept_name
             + '? Rezept unter: https://www.rezepteplan.de/Rezepte/.rezept?0='
