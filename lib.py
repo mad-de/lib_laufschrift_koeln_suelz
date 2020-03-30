@@ -53,7 +53,7 @@ def return_command_array():
 
         if not ('CORONA' in get_ticker.upper() or 'COVID'
                 in get_ticker.upper() or 'DER WESTEN'
-                in get_ticker.upper() or 'AUSGANGSBESCHRÄNKUNG'
+                in get_ticker.upper() or 'AUSGANGSBESCHR\xc3\x84NKUNG'
 		in get_ticker.upper()):
             corona_free_int = corona_free_int + 1
             if corona_free_int < 4:
