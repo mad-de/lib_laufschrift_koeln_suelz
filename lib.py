@@ -99,7 +99,7 @@ def return_command_array():
             ,
         'Unterst\xc3\xbctzt eure lokalen Gesch\xc3\xa4fte in dieser Zeit. Ihr wollt etwas lesen oder braucht eine DVD? Bestellt doch zum Beispiel \xc3\xbcber der-andere-buchladen-koeln@t-online.de.'
             ,
-        'Viele Restaurants hier im Viertel bieten einen Lieferdienst oder Abholservice z.B. www.merstonnzesamme.de'
+        'Viele Restaurants hier im Viertel bieten einen Lieferdienst oder Abholservice z.B. merstonnzesamme.de oder palanta.de'
             ,
         'Auf der Suche nach guter Musik ohne Werbung oder Corona-Nachrichten: www.radioparadise.com'
             ,
