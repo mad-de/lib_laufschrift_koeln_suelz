@@ -70,7 +70,7 @@ def return_command_array():
     rezept_name = temp_html.split(' onmouseover', 1)[0].rstrip('"')[1:]
 
     # TEXTE
-    # Ab hier die einzelnen Zeilen Ã€ndern / oder oben unter "command_array = [" eine neue hinzufÃŒgen. Ticker aktualisiert nach jedem Merge automatisch.
+    # Ab hier die einzelnen Zeilen Ã€ndern / oder über "]" eine neue hinzufügen. Der Ticker aktualisiert sich nach jedem Merge automatisch.
     # Beispiel:
     #
     # 'Meine Nachricht'
@@ -82,9 +82,11 @@ def return_command_array():
             + str(datetime.datetime.now().month) + '.'
             + str(datetime.datetime.now().year) + '. Es ist '
             + str(datetime.datetime.now().hour) + ' Uhr '
-            + str(datetime.datetime.now().minute),
+            + str(datetime.datetime.now().minute) + '.'
+            ,
         'Heute ist der ' + str(diff_days_kontaktverbot)
-            + '. Tag des Kontaktverbots in NRW und bundesweit.',
+            + '. Tag des Kontaktverbots in NRW und bundesweit.'
+            ,
         'Bleibt zuhause und bleibt gesund!',
         newsticker,
         'Das Wetter: ' + str(json_weather[u'weather'][0][u'description'
@@ -93,8 +95,7 @@ def return_command_array():
                 ][u'temp']).replace('-', u'\u2212').encode('utf-8')
             + '\xc2\xb0C. Gef\xc3\xbchlte Temperatur: '
             + str(json_weather[u'main'][u'feels_like']).replace('-',
-                u'\u2212').encode('utf-8') + '\xc2\xb0C.',
-        'Wir sitzen alle im selben Boot (zuhause) und aus Langeweile haben wir eine LED Laufschrift gebastelt :).'
+                u'\u2212').encode('utf-8') + '\xc2\xb0C.'
             ,
         'Unterst\xc3\xbctzt eure lokalen Gesch\xc3\xa4fte in dieser Zeit. Ihr wollt etwas lesen oder braucht eine DVD? Bestellt doch zum Beispiel \xc3\xbcber der-andere-buchladen-koeln@t-online.de.'
             ,
@@ -104,13 +105,15 @@ def return_command_array():
             ,
         'Langweilig und Lust auf einen guten Film? Die 10 besten Filme des 21. Jahrhunderts (lt. BBC): 10) No Country for Old Men von Joel Coen and Ethan Coen 9) A Separation von Asghar Farhadi 8) Yi Yi von Edward Yang 7) The Tree of Life von Terrence Malick 6) Eternal Sunshine of the Spotless Mind von Michel Gondry 5) Boyhood von Richard Linklater 4) Spirited Away von Hayao Miyazaki 3) There Will Be Blood von Paul Thomas Anderson 2) In the Mood for Love von Wong Kar-wai 1) Mulholland Drive von David Lynch ... Viel Spass beim Anschauen!'
             ,
-        'Was sollen ich nur kochen? Wie w\xc3\xa4re es mit '
+        'Was soll man nur kochen? Wie w\xc3\xa4re es mit '
             + rezept_name
             + '? Rezept unter: https://www.rezepteplan.de/Rezepte/.rezept?0='
-             + rezept_id + ' Guten Appetit!',
+             + rezept_id + ' Guten Appetit!'
+            ,
         'Wie w\xc3\xa4re es mit einer neuen Serie? Die 10 besten Serien aller Zeiten (lt. Cinemablend): 10) The Simpsons 9) Mad Men 8) I love Lucy 7) Saturday Night Live 6) The Sopranos 5) Seinfeld 4) Game of Thrones 3) The X-Files 2) Breaking bad 1) Friends ... Viel Spass beim Suchten!'
             ,
-        'Danke an Alle, die den Laden hier am Laufen halten!',
+        'Danke an Alle, die den Laden hier am Laufen halten!'
+            ,
         'Tolle von uns getestete, kostenlose Spiele f\xc3\xbcr einen Remote-Spieleabend mit (ebenfalls isolierten) Freunden: Trickster (App), Drawful 2 (Steam). Viel Spass beim Ausprobieren!'
             ,
         'Ihr braucht aktuell jemanden, der f\xc3\xbcr euch einkauft? Ihr wollt Hilfe anbieten? Freiwillige Helfer findet man unter anderem auf https://nebenan.de/corona oder www.die-einkaufshelden.de Oder ihr schreibt uns per Whatsapp: +44 7537 1818 02 Wir helfen auch gerne!'
