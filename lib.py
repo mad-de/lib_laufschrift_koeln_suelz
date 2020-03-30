@@ -46,11 +46,11 @@ def return_command_array():
     # 'Meine Nachricht',
     
     command_array = [
-    newsticker,
-    'Das Wetter: ' + str(json_weather[u'weather'][0][u'description'].encode('utf-8')) + '. Aktuelle Temperatur: ' + str(json_weather[u'main'][u'temp']).replace('-', u'\u2212').encode('utf-8') + '°C. Gefühlte Temperatur: ' + str(json_weather[u'main'][u'feels_like']).replace('-', u'\u2212').encode('utf-8') + '°C.',
-    'Heute ist der ' + str(datetime.datetime.now().day) + '.' + str(datetime.datetime.now().month) + '.' + str(datetime.datetime.now().year) + '. Es ist ' + str(datetime.datetime.now().hour) + ' Uhr ' + str(datetime.datetime.now().minute),
+   'Heute ist der ' + str(datetime.datetime.now().day) + '.' + str(datetime.datetime.now().month) + '.' + str(datetime.datetime.now().year) + '. Es ist ' + str(datetime.datetime.now().hour) + ' Uhr ' + str(datetime.datetime.now().minute),
     'Heute ist der ' + str(diff_days_kontaktverbot) + '. Tag des Kontaktverbots in NRW und bundesweit.',  
     'Bleibt zuhause und bleibt gesund!',
+     newsticker,
+    'Das Wetter: ' + str(json_weather[u'weather'][0][u'description'].encode('utf-8')) + '. Aktuelle Temperatur: ' + str(json_weather[u'main'][u'temp']).replace('-', u'\u2212').encode('utf-8') + '°C. Gefühlte Temperatur: ' + str(json_weather[u'main'][u'feels_like']).replace('-', u'\u2212').encode('utf-8') + '°C.',
     'Wir sitzen alle im selben Boot (zuhause) und aus Langeweile haben wir eine LED Laufschrift gebastelt :).', 
     'Unterstützt eure lokalen Geschäfte in dieser Zeit. Ihr wollt etwas lesen oder braucht eine DVD? Bestellt doch zum Beispiel über der-andere-buchladen-koeln@t-online.de.',
     'Viele Restaurants hier im Viertel bieten einen Lieferdienst oder Abholservice z.B. www.merstonnzesamme.de',
