@@ -12,9 +12,11 @@ def return_command_array():
     # GREETINGS
 
     greeting = 'Guten Morgen!'
-    if datetime.datetime.now().hour > 11 and datetime.datetime.now().hour < 15:
+    if datetime.datetime.now().hour > 11 and datetime.datetime.now().hour < 14:
         greeting = 'Mahlzeit!'
-    if datetime.datetime.now().hour > 14 and datetime.datetime.now().hour < 22:
+    if datetime.datetime.now().hour > 13 and datetime.datetime.now().hour < 19:
+        greeting = 'Schönen Nachmittag!'	
+    if datetime.datetime.now().hour > 18 and datetime.datetime.now().hour < 22:
         greeting = 'Guten Abend!'
     if datetime.datetime.now().hour > 21 and datetime.datetime.now().hour < 25:
         greeting = 'Gute Nacht!'	
