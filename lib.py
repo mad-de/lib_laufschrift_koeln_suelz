@@ -131,11 +131,13 @@ def return_command_array():
             ,
 	'ABS verteilt jeden Tag kostenlos Essen an Bedürftige im Gottesweg 135 ab 17 Uhr. '
             ,
-        'Von uns getestete, kostenlose Spiele f\xc3\xbcr einen Remote-Spieleabend mit (ebenfalls isolierten) Freunden: Trickster (App), Drawful 2 (Steam). Viel Spass beim Ausprobieren!'
+	'Habt ihr noch medizinisches Material wie Einmalhandschuhe oder Atemschutzmasken übrig? Spendet sie doch an Gesundheitsdienstleister auf remedymatch.io'
             ,
-        'Ihr braucht aktuell jemanden, der f\xc3\xbcr euch einkauft? Ihr wollt Hilfe anbieten? Freiwillige Helfer findet man unter anderem auf https://nebenan.de/corona oder www.die-einkaufshelden.de Oder ihr schreibt uns per Whatsapp: +44 7537 1818 02 Wir helfen auch gerne!'
+	'Von uns getestete, kostenlose Spiele f\xc3\xbcr einen Remote-Spieleabend mit (ebenfalls isolierten) Freunden: Trickster (App), Drawful 2 (Steam). Viel Spass beim Ausprobieren!'
             ,
-        'Eure Nachricht hier anzeigen lassen? https://github.com/mad-de/lib_laufschrift_koeln_suelz/ Oder wollt ihr uns etwas mitteilen? Whatsapp: +44 7537 181802'
+        'Ihr braucht aktuell jemanden, der f\xc3\xbcr euch einkauft? Ihr wollt Hilfe anbieten? Freiwillige Helfer findet man unter anderem auf machbarschaft.jetzt & colivery.de & nebenan.de/corona & die-einkaufshelden.de oder auch telefonisch: 040 299960980. Oder ihr schreibt uns per Whatsapp: +44 7537 1818 02. Wir helfen auch gerne!'
+            ,
+	'Eure Nachricht hier anzeigen lassen? https://github.com/mad-de/lib_laufschrift_koeln_suelz/ Oder wollt ihr uns etwas mitteilen? Whatsapp: +44 7537 181802'
             ,
         ]
 
