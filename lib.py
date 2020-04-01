@@ -68,6 +68,7 @@ def return_command_array():
                 in get_ticker.upper() or 'AUSGANGSBESCHR'
 		in get_ticker.upper() or 'VIP'
 	       	in get_ticker.upper() or 'BUNTE'
+	       	in get_ticker.upper() or 'SARS'
 	       	in get_ticker.upper()):
             corona_free_int = corona_free_int + 1
             if corona_free_int < 4:
