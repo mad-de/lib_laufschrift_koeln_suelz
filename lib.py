@@ -6,6 +6,42 @@ import random
 import json
 from urllib import urlopen
 
+# CATFACTS
+
+def return_return_random_cat_facts():
+	cat_facts_array = [
+	'Viele Tierheime weigern sich um Halloween herum, ihre schwarzen Katzen wegzugeben - aus Angst vor Satanisten, die die Katzen opfern oder foltern.'
+	,
+	'In Belgien wurden Katzen 1879 kurz als "Postboten" benutzt - sie trugen in einem Radius von 30 Kilometern Briefe aus. Allerdings scheiterte der Versuch nach kurzer Zeit, denn die Katzen wollten einfach nicht gehorchen.'
+	,
+	'Die Siamkatze "F. D. C. Willard" ist bis heute die einzige Katze, die physikalische Arbeiten in Fachzeitschriften veröffentlichte. Der eigentliche Autor, Jack H. Hetherington, hatte immer in der "Wir"-Form geschrieben, und holte dafür seinen Kater als Ko-Autor hinzu und ließ ihn sogar die ersten Druckexemplare mit Pfotenabdrücken "signieren".'
+	,
+	'Guinness World Records verleiht offiziell keine Preise mehr an die "fetteste Katze der Welt" (bzw. an irgendein fettestes Tier der Welt), um absichtliche Überfütterung zu stoppen.'
+	,
+	'Freddie Mercury, der Sänger der Band Queen, widmete sein Solo-Album seiner Katze Jerry mit den Worten: "Für meine Katze Jerry, sowie für Tom, Oscar und Tiffany und alle Katzen-Liebhaber dieser Welt - alle anderen kann man vergessen."'
+	,
+	'Nachts gehört das Disneyland in Kalifornienden Katzen. Etwa 200 wilde Katzen leben in dem Themenpark und werden dort nicht nur toleriert, sondern wie Haustiere behandelt: Sie werden kastriert und geimpft. Nur gefüttert werden sie nicht, denn es ist ihre Funktion, den Park von Mäusen zu säubern.'
+	,
+	'Der Kater "Oscar", der in einem Altersheim in den USA lebt, gilt als "Hellseher" - wann immer er sich zum Schlafen neben einen der Heimbewohner lebt, stirbt dieser wenige Stunden darauf. So hat "Oscar" schon über 100 Tode vorhergesagt. Die Mitarbeiter rufen inzwischen schon die Angehörigen, sobald sie "Oscar" neben dem Patienten liegen sehen.'
+	,
+	'Erwachsene Katzen kommunizieren nicht durch Miauen miteinander. Sie miauen dann nur noch, um mit uns Menschen zu "sprechen".'
+	,
+	'"Creme Puff" und sein Bruder "Granpa" waren die beiden ältesten Katzen der Welt. "Creme Puff" starb mit 38, "Granpa" mit 34 Jahren. Sie lebten im selben Haushalt und wurden mit Speck, Eiern, Brokkoli, Spargel sowie Kaffee mit Sahne ernährt.'
+	,
+	'Die Katze "Emmy" war Schiffskatze auf der RMS Empress of Ireland und auf jeder Reise dabei. Eines Tages weigerte sie sich jedoch, an Bord zu gehen - und das Schiff sank am nächsten Tag. '
+	,
+	'"Merlin" ist die lauteste Katze der Welt - sein Schnurren hält den Weltrekord mit fast 70 Dezibel. Das ist so laut wie ein Staubsauger!'
+	,
+	'Katzen sind für gewöhnlich "rechtshändig", während Kater die linke Pfote bevorzugen.'
+	,
+	'Katzen dürfen nicht vegetarisch ernährt werden, da sie Taurin benötigen, das nur in Fleisch enthalten ist. Eine vegetarische Ernährung kann zu Blindheit und schließlich zum Tod führen.'
+	,
+	'65-85% aller Katzen, die zwei blaue Augen haben, sind taub.'
+	,
+	'Katzen können von Thunfisch abhängig werden und sich weigern, etwas anderes zu essen.'
+	]
+	return random.choice(cat_facts_array)
+
 
 def return_command_array():
 	
@@ -104,6 +140,7 @@ def return_command_array():
             + '. Tag des Kontaktverbots in NRW und bundesweit.'
             ,
         'Bleibt zuhause und bleibt gesund!',
+	'Zufälliger Katzenfakt: ' + return_return_random_cat_facts(),
         newsticker,
         'Das Wetter: ' + str(json_weather[u'weather'][0][u'description'
                              ].encode('utf-8'))
