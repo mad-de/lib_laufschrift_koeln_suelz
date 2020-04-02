@@ -39,6 +39,46 @@ def return_return_random_cat_facts():
 	'65-85% aller Katzen, die zwei blaue Augen haben, sind taub.'
 	,
 	'Katzen können von Thunfisch abhängig werden und sich weigern, etwas anderes zu essen.'
+	,
+	'Der Herzschlag einer Katze ist doppelt so schnell wie der eines Menschen. 110 – 140 Mal schlägt das kleine Herz Ihres Abenteurers in der Minute.'
+	,
+	'Es stimmt! Katzen landen wirklich (fast) immer auf ihren Beinen. Der sogenannte Stellreflex sorgt dafür, dass eine Katze ihren Körper im freien Fall blitzschnell drehen kann. Diese lebensnotwendige Technik beherrschen Katzenkinder ab dem 39sten Lebenstag. Ausnahmen bestätigen allerdings auch hier die Regel: Ist die Fallhöhe zu niedrig, kann sich die Katze eventuell nicht vollständig drehen. Ist die Fallhöhe dagegen zu hoch, könnte sie sich trotz der Landung auf ihren Pfoten ernsthaft verletzen. '
+	,
+	'Im Alten Ägypten war es nicht erlaubt eine Katze zu töten. Die Tiere hielten die große Getreidespeicher des Landes frei von Nagetieren und sorgten so für das Überleben der ganzen Bevölkerung. Nahm man einer Katze das Leben, musste man um sein eigenes fürchten!'
+	,
+	'\"Gott schuf die Katze, damit der Mensch einen Tiger zum Streicheln hat.\" (Victor Hugo)
+	,
+	'Katzen können nichts Süßes schmecken. Ihre Zungen haben dafür keine Geschmacksrezeptoren.'
+	,
+	'Katzen lieben mit ihren Augen! Wenn Sie Ihre Katze langsam anblinzelt, ist das ein Zeichen dafür, dass Sie ihr Freund sind.'
+	,
+	'Sir Isaac Newton ist nicht nur der Entdecker der Schwerkraft, er hat auch die Katzenklappe erfunden!'
+	,
+	'In Deutschland leben über 11 Millionen Katzen. Die Katze ist also mit Abstand das beliebteste Haustier der Deutschen.'
+	,
+	'Es gibt 70 verschiedene anerkannte Katzenrassen. Auf sogenannten Katzenausstellungen werden die schönsten ihrer Art prämiert.'
+	,
+	'1983 hat Frankreich die erste Katze ins All geschickt. Sie hieß Felicette und landete nach ihrem Abenteuer wieder putzmunter auf der Erde.'
+	,
+	'Katzen sind unglaublich gute Springer! Sie können das bis zu 5 fache ihrer Schwanzlänge springen.'
+	,
+	'Der Rücken einer Katze ist extrem flexibel. Er hat insgesamt 43 Rückenwirbel. Ein Mensch hat im Vergleich dazu nur 34.'
+	,
+	'Katzen haben kein Schlüsselbein! Ihre „lose“ sitzenden Schultern machen ihr Skelett besonders wendig und flexibel. So gilt die Katzen-Faustregel: Passt der Kopf durch, ist der Körper kein Problem!'
+	,
+	'Erwachsene Katzen haben eine Normaltemperatur von 38,3 bis 39 °C. Da sie am Körper keine Schweißdrüsen haben, schwitzen sie ausschließlich über ihre Pfoten.'
+	,
+	'Weibliche Katzen sind meistens Rechtshänder, ihre männlichen Kollegen dagegen meistens Linkshänder.'
+	,
+	'Das Gehirn einer Katze ist einem Menschengehirn ähnlicher als einem Hundegehirn. Menschen und Katzen haben die identischen Regionen für Emotionen.'
+	,
+	'Wildkatzen sind Einzelgänger. Sie beanspruchen ihr Gebiet für sich allein und verteidigen ihr Revier erbittert.'
+	,
+	' Katzen sind überaus reinliche Tiere. Da sie ihr Fell gerne mit ihrer rauen Zunge putzen und dabei viele Haare schlucken, müssen sie von Zeit zu Zeit einen Haarballen herauswürgen. Der Fachbegriff für diesen Haarballen ist \"Bezoar\".'
+	,
+	'Das Gehör einer Katze ist besser als das eines Hundes. Sie können zwei Oktaven höher hören als Menschen.'
+	,
+	'Katzen verschlafen im Durchschnitt 70% ihres Lebens. Anders gesagt: Katzen verschlafen zwei Drittel ihres Lebens! Na dann, gute Nacht.'
 	]
 	return random.choice(cat_facts_array)
 
@@ -50,9 +90,9 @@ def return_command_array():
     greeting = 'Guten Morgen!'
     if datetime.datetime.now().hour > 11 and datetime.datetime.now().hour < 14:
         greeting = 'Mahlzeit!'
-    if datetime.datetime.now().hour > 13 and datetime.datetime.now().hour < 19:
+    if datetime.datetime.now().hour > 13 and datetime.datetime.now().hour < 18:
         greeting = 'Schönen Nachmittag!'	
-    if datetime.datetime.now().hour > 18 and datetime.datetime.now().hour < 22:
+    if datetime.datetime.now().hour > 17 and datetime.datetime.now().hour < 22:
         greeting = 'Guten Abend!'
     if datetime.datetime.now().hour > 21 and datetime.datetime.now().hour < 25:
         greeting = 'Gute Nacht!'	
