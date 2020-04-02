@@ -46,7 +46,7 @@ def return_return_random_cat_facts():
 	,
 	'Im Alten Ägypten war es nicht erlaubt eine Katze zu töten. Die Tiere hielten die große Getreidespeicher des Landes frei von Nagetieren und sorgten so für das Überleben der ganzen Bevölkerung. Nahm man einer Katze das Leben, musste man um sein eigenes fürchten!'
 	,
-	'\"Gott schuf die Katze, damit der Mensch einen Tiger zum Streicheln hat.\" (Victor Hugo)
+	'\"Gott schuf die Katze, damit der Mensch einen Tiger zum Streicheln hat.\" (Victor Hugo)'
 	,
 	'Katzen können nichts Süßes schmecken. Ihre Zungen haben dafür keine Geschmacksrezeptoren.'
 	,
@@ -74,7 +74,7 @@ def return_return_random_cat_facts():
 	,
 	'Wildkatzen sind Einzelgänger. Sie beanspruchen ihr Gebiet für sich allein und verteidigen ihr Revier erbittert.'
 	,
-	' Katzen sind überaus reinliche Tiere. Da sie ihr Fell gerne mit ihrer rauen Zunge putzen und dabei viele Haare schlucken, müssen sie von Zeit zu Zeit einen Haarballen herauswürgen. Der Fachbegriff für diesen Haarballen ist \"Bezoar\".'
+	'Katzen sind überaus reinliche Tiere. Da sie ihr Fell gerne mit ihrer rauen Zunge putzen und dabei viele Haare schlucken, müssen sie von Zeit zu Zeit einen Haarballen herauswürgen. Der Fachbegriff für diesen Haarballen ist \"Bezoar\".'
 	,
 	'Das Gehör einer Katze ist besser als das eines Hundes. Sie können zwei Oktaven höher hören als Menschen.'
 	,
