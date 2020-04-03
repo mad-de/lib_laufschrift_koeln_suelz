@@ -196,6 +196,8 @@ def return_command_array():
             ,
         'Auf der Suche nach guter Musik ohne Werbung oder Corona-Nachrichten: www.radioparadise.com'
             ,
+	'Unterstützt lokale Läden indem ihr jetzt einen Gutschein kauft unter www.veedelsretter.koeln'
+	    ,
         #'Langweilig und Lust auf einen guten Film? Die 10 besten Filme des 21. Jahrhunderts (lt. BBC): 10) No Country for Old Men von Joel Coen and Ethan Coen 9) A Separation von Asghar Farhadi 8) Yi Yi von Edward Yang 7) The Tree of Life von Terrence Malick 6) Eternal Sunshine of the Spotless Mind von Michel Gondry 5) Boyhood von Richard Linklater 4) Spirited Away von Hayao Miyazaki 3) There Will Be Blood von Paul Thomas Anderson 2) In the Mood for Love von Wong Kar-wai 1) Mulholland Drive von David Lynch ... Viel Spass beim Anschauen!'
         #    ,
         'Was soll man nur kochen? Wie w\xc3\xa4re es mit '
@@ -207,7 +209,7 @@ def return_command_array():
         #    ,
         'Danke an Alle, die den Laden hier am Laufen halten!'
             ,
-	'ABS verteilt jeden Tag kostenlos Essen an Bedürftige im Gottesweg 135 ab 17 Uhr. '
+	'ABS verteilt jeden Tag kostenlos eine Anzahl von Essen an Bedürftige im Gottesweg 135 ab 12 Uhr. '
             ,
 	'Habt ihr noch medizinisches Material wie Einmalhandschuhe oder Atemschutzmasken übrig? Spendet sie doch an Gesundheitsdienstleister auf remedymatch.io'
             ,
