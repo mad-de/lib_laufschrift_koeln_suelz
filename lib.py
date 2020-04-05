@@ -92,8 +92,10 @@ def return_command_array():
         greeting = 'Mahlzeit!'
     if datetime.datetime.now().hour > 13 and datetime.datetime.now().hour < 18:
         greeting = 'Schönen Nachmittag!'	
-    if datetime.datetime.now().hour > 17 and datetime.datetime.now().hour < 22:
+    if datetime.datetime.now().hour > 17 and datetime.datetime.now().hour < 21:
         greeting = 'Guten Abend!'
+    if datetime.datetime.now().hour > 20 and datetime.datetime.now().hour < 22:
+        greeting = 'Es unser Veedel, Denn he hält m`r zosamme, Ejal wat och passeet, En uns`rem Veedel.'	
     if datetime.datetime.now().hour > 21 and datetime.datetime.now().hour < 25:
         greeting = 'Gute Nacht!'	
 	
