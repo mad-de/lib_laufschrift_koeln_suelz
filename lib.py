@@ -179,9 +179,9 @@ def return_command_array():
             + str(datetime.datetime.now().minute) + '.'
             ,
         'Heute ist der ' + str(diff_days_kontaktverbot)
-            + '. Tag des Kontaktverbots in NRW und bundesweit.'
+            + '. Tag der Kontakteinschränkungen in NRW und bundesweit.'
             ,
-        'Bleibt zuhause und bleibt gesund!',
+        'Bleibt auf Abstand und bleibt gesund!',
 	'Zufälliger Katzenfakt: ' + return_return_random_cat_facts(),
         newsticker,
         'Das Wetter: ' + str(json_weather[u'weather'][0][u'description'
