@@ -153,7 +153,7 @@ def return_command_array():
                 newsticker = newsticker + get_ticker.encode('utf-8')
 
     # Recipe
-
+"""
     rezept_url = \
         urlopen('https://www.rezepteplan.de/SpeisePlan/Zuf%C3%A4lligerSpeisePlan.aspx?34=1'
                 )
@@ -162,7 +162,7 @@ def return_command_array():
     rezept_id = temp_html.split(' NiceTitle=', 1)[0].rstrip('"')[1:]
     temp_html = temp_html.split(' NiceTitle=', 1)[1]
     rezept_name = temp_html.split(' onmouseover', 1)[0].rstrip('"')[1:]
-
+"""
     # TEXTE
     # Ab hier die einzelnen Zeilen Ã€ndern / oder über "]" eine neue hinzufügen. Der Ticker aktualisiert sich nach jedem Merge automatisch.
     # Beispiel:
