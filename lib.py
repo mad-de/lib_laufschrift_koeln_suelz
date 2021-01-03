@@ -11,7 +11,7 @@ from requests import Request, Session
 
 url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest'
 parameters = {
-  'symbol':'LTC,BTC,ETH,EURS',
+  'symbol':'LTC,BTC,XLM,ETH,EURS',
   'convert':'USD'
 }
 headers = {
