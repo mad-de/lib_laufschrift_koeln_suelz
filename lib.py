@@ -6,6 +6,7 @@ import random
 import json
 from urllib import urlopen
 from requests import Request, Session
+import unicodedata
 
 # Crypto
 
