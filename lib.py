@@ -56,7 +56,7 @@ else:
   xlm24h = ""
 xlm24h = xlm24h + str("{:.2f}".format(data[u'data'][u'XLM'][u'quote'][u'USD'][u'percent_change_24h']))
 
-crypto_ticker = "Die aktuellen Cryptopreise: Bitcoin: " + btcUSD + " $ (" + btcEUR + " €); " + btc24h + " % || Ethereum: " + ethUSD + " $ (" + ethEUR + " €); " + eth24h + " % || Stellar: " + xlmUSD + " $ (" + xlmEUR + " €); " + xlm24h + " %" || Litecoin: " + ltcUSD + " $ (" + ltcEUR + " €); " + ltc24h + " %"
+crypto_ticker = "Die aktuellen Cryptopreise: Bitcoin: " + btcUSD + " $ (" + btcEUR + " €); " + btc24h + " % || Ethereum: " + ethUSD + " $ (" + ethEUR + " €); " + eth24h + " % || Stellar: " + xlmUSD + " $ (" + xlmEUR + " €); " + xlm24h + " % || Litecoin: " + ltcUSD + " $ (" + ltcEUR + " €); " + ltc24h + " %"
 
 # CATFACTS
 
