@@ -168,7 +168,7 @@ def return_command_array():
     newsticker = \
         'Spiegel Nachrichten (via newsapi.org): '
 
-    for news_i in range(0, 5):
+    for news_i in range(0, 3):
         if not json_news[u'articles'][news_i][u'title'] == None:
             get_ticker = json_news[u'articles'
                     ][news_i][u'title'] + '. '
@@ -206,7 +206,6 @@ def return_command_array():
 #            + '. Tag der Kontakteinschränkungen in NRW und bundesweit.'
 #            ,
 #	'Zufälliger Katzenfakt: ' + return_return_random_cat_facts(),
-        newsticker,
         'Gerade läuft: ' + str(json_rp[u'title'].encode('utf-8')) 
 	    + ' von ' +  str(json_rp[u'artist'].encode('utf-8')) 
 	    + ' aus dem Album ' +  str(json_rp[u'album'].encode('utf-8')) 
@@ -222,6 +221,7 @@ def return_command_array():
 	    ,
 	    crypto_ticker
             ,
+	    newsticker,
         'Zufälliges Rezept: '
             + rezept_name
             + ' auf: https://www.rezepteplan.de/Rezepte/.rezept?0='
