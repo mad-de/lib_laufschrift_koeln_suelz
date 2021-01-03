@@ -5,6 +5,45 @@ import datetime
 import random
 import json
 from urllib import urlopen
+from requests import Request, Session
+
+# Crypto
+
+url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest'
+parameters = {
+  'symbol':'BTC,ETH,EURS',
+  'convert':'USD'
+}
+headers = {
+  'Accepts': 'application/json',
+  'X-CMC_PRO_API_KEY': 'ea1255b1-ccb2-49a2-9043-3a84fa9bc62e',
+}
+
+session = Session()
+session.headers.update(headers)
+response = session.get(url, params=parameters)
+data = json.loads(response.text)
+
+print(data)
+
+ethUSD = str("{:.2f}".format(data[u'data'][u'ETH'][u'quote'][u'USD'][u'price']))
+ethEUR = str("{:.2f}".format(data[u'data'][u'ETH'][u'quote'][u'USD'][u'price'] /  data[u'data'][u'EURS'][u'quote'][u'USD'][u'price']))
+if data[u'data'][u'ETH'][u'quote'][u'USD'][u'percent_change_24h'] > 0:
+ eth24h = "+"
+else:
+  eth24h = ""
+eth24h = eth24h + str("{:.2f}".format(data[u'data'][u'ETH'][u'quote'][u'USD'][u'percent_change_24h']))
+
+btcUSD = str("{:.2f}".format(data[u'data'][u'BTC'][u'quote'][u'USD'][u'price']))
+btcEUR = str("{:.2f}".format(data[u'data'][u'BTC'][u'quote'][u'USD'][u'price'] /  data[u'data'][u'EURS'][u'quote'][u'USD'][u'price']))
+if data[u'data'][u'BTC'][u'quote'][u'USD'][u'percent_change_24h'] > 0:
+ btc24h = "+"
+else:
+  btc24h = ""
+
+btc24h = btc24h + str("{:.2f}".format(data[u'data'][u'BTC'][u'quote'][u'USD'][u'percent_change_24h']))
+
+crypto_ticker = "Die aktuellen Cryptopreise: Bitcoin: " + btcUSD + " $ (" + btcEUR + " €); " + btc24h + " % || Ethereum: " + ethUSD + " $ (" + ethEUR + " €); " + eth24h + " %"
 
 # CATFACTS
 
@@ -190,6 +229,8 @@ def return_command_array():
             + '\xc2\xb0C. Gef\xc3\xbchlte Temperatur: '
             + str(json_weather[u'main'][u'feels_like']).replace('-',
                 u'\u2212').encode('utf-8') + '\xc2\xb0C.'
+	    ,
+	    crypto_ticker
 #            ,
 #        'Was soll man nur kochen? Wie w\xc3\xa4re es mit '
 #            + rezept_name
