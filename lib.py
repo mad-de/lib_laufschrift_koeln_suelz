@@ -180,12 +180,11 @@ def return_command_array():
 	#if not (json_news[u'articles'][news_i][u'content'] == None):
 	#    get_ticker = get_ticker + json_news[u'articles'][news_i][u'content']
 
-        if not ('CORONA' in get_ticker.upper() or 'COVID'
-                in get_ticker.upper() or 'DER WESTEN'
-                in get_ticker.upper() or 'AUSGANGSBESCHR'
+        if not ('DER WESTEN'
+               # in get_ticker.upper() or 'AUSGANGSBESCHR' ('CORONA' in get_ticker.upper() or 'COVID'
 		in get_ticker.upper() or 'VIP'
 	       	in get_ticker.upper() or 'BUNTE'
-	       	in get_ticker.upper() or 'SARS'
+	       #	in get_ticker.upper() or 'SARS'
 	       	in get_ticker.upper()):
             corona_free_int = corona_free_int + 1
             if corona_free_int < 4:
@@ -221,7 +220,7 @@ def return_command_array():
 #            ,
 #        'Bleibt auf Abstand und bleibt gesund!',
 #	'Zufälliger Katzenfakt: ' + return_return_random_cat_facts(),
-#        newsticker,
+        newsticker,
         'Das Wetter: ' + str(json_weather[u'weather'][0][u'description'
                              ].encode('utf-8'))
             + '. Aktuelle Temperatur: ' + str(json_weather[u'main'
