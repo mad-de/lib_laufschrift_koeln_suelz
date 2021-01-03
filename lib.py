@@ -24,16 +24,16 @@ session.headers.update(headers)
 response = session.get(url, params=parameters)
 data = json.loads(response.text)
 
-ethUSD = str("{:.2f}".format(data[u'data'][u'ETH'][u'quote'][u'USD'][u'price']))
-ethEUR = str("{:.2f}".format(data[u'data'][u'ETH'][u'quote'][u'USD'][u'price'] /  data[u'data'][u'EURS'][u'quote'][u'USD'][u'price']))
+ethUSD = str("{:,.2f}".format(data[u'data'][u'ETH'][u'quote'][u'USD'][u'price']))
+ethEUR = str("{:,.2f}".format(data[u'data'][u'ETH'][u'quote'][u'USD'][u'price'] /  data[u'data'][u'EURS'][u'quote'][u'USD'][u'price']))
 if data[u'data'][u'ETH'][u'quote'][u'USD'][u'percent_change_24h'] > 0:
  eth24h = "+"
 else:
   eth24h = ""
 eth24h = eth24h + str("{:.2f}".format(data[u'data'][u'ETH'][u'quote'][u'USD'][u'percent_change_24h']))
 
-btcUSD = str("{:.2f}".format(data[u'data'][u'BTC'][u'quote'][u'USD'][u'price']))
-btcEUR = str("{:.2f}".format(data[u'data'][u'BTC'][u'quote'][u'USD'][u'price'] /  data[u'data'][u'EURS'][u'quote'][u'USD'][u'price']))
+btcUSD = str("{:,.2f}".format(data[u'data'][u'BTC'][u'quote'][u'USD'][u'price']))
+btcEUR = str("{:,.2f}".format(data[u'data'][u'BTC'][u'quote'][u'USD'][u'price'] /  data[u'data'][u'EURS'][u'quote'][u'USD'][u'price']))
 if data[u'data'][u'BTC'][u'quote'][u'USD'][u'percent_change_24h'] > 0:
  btc24h = "+"
 else:
