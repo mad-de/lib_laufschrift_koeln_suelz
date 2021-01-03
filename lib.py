@@ -173,9 +173,9 @@ def return_command_array():
         if not json_news[u'articles'][news_i][u'title'] == None:
             news_array.append(json_news[u'articles'
                     ][news_i][u'title'] + '. ' + json_news[u'articles'
-                    ][news_i][u'description']
+                    ][news_i][u'description'])
 
-        newsticker = newsticker + random.choice(news_array).encode('utf-8')
+    newsticker = newsticker + random.choice(news_array).encode('utf-8')
 
     # Recipe
     rezept_url = \
