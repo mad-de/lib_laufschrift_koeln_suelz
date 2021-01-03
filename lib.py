@@ -226,7 +226,7 @@ def return_command_array():
         'Das Wetter: ' + str(json_weather[u'weather'][0][u'description'
                              ].encode('utf-8'))
             + '. Aktuelle Temperatur: ' + str(json_weather[u'main'
-                ][u'temp']).replace('-', u'\u2212').encode('unewstf-8')
+                ][u'temp']).replace('-', u'\u2212').encode('utf-8')
             + '\xc2\xb0C. Gef\xc3\xbchlte Temperatur: '
             + str(json_weather[u'main'][u'feels_like']).replace('-',
                 u'\u2212').encode('utf-8') + '\xc2\xb0C.'
