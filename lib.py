@@ -176,17 +176,20 @@ def return_command_array():
         urlopen('https://newsapi.org/v2/top-headlines?sources=spiegel-online&apiKey=2d9859f0514247a596b6eb020e0a81fe'
                 )
     json_news = json.loads(json_news_url.read())
-    newsticker = \
-        'Spiegel Nachrichten (via newsapi.org): '
-    news_array = []
+    if[u'status'] == "error":
+	newsticker = ""
+    else:
+    	newsticker = \
+        	'Spiegel News (via newsapi.org): '
+    	news_array = []
 	
-    for news_i in range(0, 10):
-        if not json_news[u'articles'][news_i][u'title'] == None:
-            news_array.append(json_news[u'articles'
+    	for news_i in range(0, 10):
+        	if not json_news[u'articles'][news_i][u'title'] == None:
+            	news_array.append(json_news[u'articles'
                     ][news_i][u'title'] + '. ' + json_news[u'articles'
                     ][news_i][u'description'])
 
-    newsticker = newsticker + random.choice(news_array).encode('utf-8')
+    	newsticker = newsticker + random.choice(news_array).encode('utf-8')
 
     # Recipe
     rezept_url = \
@@ -224,7 +227,7 @@ def return_command_array():
         'Das Wetter: ' + str(json_weather[u'weather'][0][u'description'
                              ].encode('utf-8'))
             + '. Aktuelle Temperatur: ' + str(json_weather[u'main'
-                ][u'temp']).replace('-', u'\u2212').encode('utf-8')
+                ][u'temp']).replace('-', u'\u2212').encode('unewstf-8')
             + '\xc2\xb0C. Gef\xc3\xbchlte Temperatur: '
             + str(json_weather[u'main'][u'feels_like']).replace('-',
                 u'\u2212').encode('utf-8') + '\xc2\xb0C.'
