@@ -170,7 +170,7 @@ def return_command_array():
     news_array = []
 	
     for news_i in range(0, 20):
-        if not json_news[u'articles'][news_i][u'title'] == None && not json_news[u'articles'][news_i][u'description'] == None
+        if not json_news[u'articles'][news_i][u'title'] == None && not json_news[u'articles'][news_i][u'description'] == None:
             news_array.append(json_news[u'articles'
                     ][news_i][u'title'] + '. ' + json_news[u'articles'
                     ][news_i][u'description']
