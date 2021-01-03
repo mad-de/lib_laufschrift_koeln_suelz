@@ -92,11 +92,11 @@ def return_command_array():
         greeting = 'Mahlzeit!'
     if datetime.datetime.now().hour > 13 and datetime.datetime.now().hour < 18:
         greeting = 'Schönen Nachmittag!'	
-    if datetime.datetime.now().hour > 17 and datetime.datetime.now().hour < 21:
+    if datetime.datetime.now().hour > 17 and datetime.datetime.now().hour < 20:
         greeting = 'Guten Abend!'
-    if datetime.datetime.now().hour > 20 and datetime.datetime.now().hour < 22:
-        greeting = 'Es unser Veedel, Denn he hält m`r zosamme, Ejal wat och passeet, En uns`rem Veedel.'	
-    if datetime.datetime.now().hour > 21 and datetime.datetime.now().hour < 25:
+#    if datetime.datetime.now().hour > 20 and datetime.datetime.now().hour < 22:
+#        greeting = 'Es unser Veedel, Denn he hält m`r zosamme, Ejal wat och passeet, En uns`rem Veedel.'	
+    if datetime.datetime.now().hour > 19 and datetime.datetime.now().hour < 25:
         greeting = 'Gute Nacht!'	
 	
     # DATES
@@ -177,12 +177,12 @@ def return_command_array():
             + str(datetime.datetime.now().hour) + ' Uhr '
             + str(datetime.datetime.now().minute) + '.'
             ,
-        'Heute ist der ' + str(diff_days_kontaktverbot)
-            + '. Tag der Kontakteinschränkungen in NRW und bundesweit.'
-            ,
-        'Bleibt auf Abstand und bleibt gesund!',
-	'Zufälliger Katzenfakt: ' + return_return_random_cat_facts(),
-        newsticker,
+#        'Heute ist der ' + str(diff_days_kontaktverbot)
+#            + '. Tag der Kontakteinschränkungen in NRW und bundesweit.'
+#            ,
+#        'Bleibt auf Abstand und bleibt gesund!',
+#	'Zufälliger Katzenfakt: ' + return_return_random_cat_facts(),
+#        newsticker,
         'Das Wetter: ' + str(json_weather[u'weather'][0][u'description'
                              ].encode('utf-8'))
             + '. Aktuelle Temperatur: ' + str(json_weather[u'main'
