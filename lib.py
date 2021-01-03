@@ -169,7 +169,7 @@ def return_command_array():
         'Spiegel Nachrichten (via newsapi.org): '
     news_array = []
 	
-    for news_i in range(0, 20):
+    for news_i in range(0, 10):
         if not json_news[u'articles'][news_i][u'title'] == None:
             news_array.append(json_news[u'articles'
                     ][news_i][u'title'] + '. ' + json_news[u'articles'
