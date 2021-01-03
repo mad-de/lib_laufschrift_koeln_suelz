@@ -167,16 +167,15 @@ def return_command_array():
     json_news = json.loads(json_news_url.read())
     newsticker = \
         'Spiegel Nachrichten (via newsapi.org): '
-
-    for news_i in range(0, 3):
-        if not json_news[u'articles'][news_i][u'title'] == None:
-            get_ticker = json_news[u'articles'
-                    ][news_i][u'title'] + '. '
-        if not json_news[u'articles'][news_i][u'description'] == None:
-            get_ticker = get_ticker + json_news[u'articles'
+    news_array = []
+	
+    for news_i in range(0, 20):
+        if not json_news[u'articles'][news_i][u'title'] == None && not json_news[u'articles'][news_i][u'description'] == None
+            news_array.append(json_news[u'articles'
+                    ][news_i][u'title'] + '. ' + json_news[u'articles'
                     ][news_i][u'description']
 
-        newsticker = newsticker + get_ticker.encode('utf-8')
+        newsticker = newsticker + random.choice(news_array).encode('utf-8')
 
     # Recipe
     rezept_url = \
