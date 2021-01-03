@@ -176,7 +176,7 @@ def return_command_array():
             get_ticker = get_ticker + json_news[u'articles'
                     ][news_i][u'description']
 
-                newsticker = newsticker + get_ticker.encode('utf-8')
+        newsticker = newsticker + get_ticker.encode('utf-8')
 
     # Recipe
     rezept_url = \
