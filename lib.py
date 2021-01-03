@@ -176,7 +176,7 @@ def return_command_array():
         urlopen('https://newsapi.org/v2/top-headlines?sources=spiegel-online&apiKey=2d9859f0514247a596b6eb020e0a81fe'
                 )
     json_news = json.loads(json_news_url.read())
-    if[u'status'] == "error":
+    if['status'] == "error":
 	newsticker = ""
     else:
     	newsticker = \
