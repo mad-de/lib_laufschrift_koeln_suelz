@@ -51,10 +51,9 @@ ltc24h = ltc24h + str("{:.2f}".format(data[u'data'][u'LTC'][u'quote'][u'USD'][u'
 xlmUSD = str("{:,.2f}".format(data[u'data'][u'XLM'][u'quote'][u'USD'][u'price']))
 xlmEUR = str("{:,.2f}".format(data[u'data'][u'XLM'][u'quote'][u'USD'][u'price'] /  data[u'data'][u'EURS'][u'quote'][u'USD'][u'price']))
 if data[u'data'][u'XLM'][u'quote'][u'USD'][u'percent_change_24h'] > 0:
- xlm24h = "+"
+ xlm24h = "+" + str("{:.2f}".format(data[u'data'][u'XLM'][u'quote'][u'USD'][u'percent_change_24h']))
 else:
-  xlm24h = ""
-xlm24h = xlm24h + str("{:.2f}".format(data[u'data'][u'XLM'][u'quote'][u'USD'][u'percent_change_24h']))
+  xlm24h = str("{:.2f}".format(data[u'data'][u'XLM'][u'quote'][u'USD'][u'percent_change_24h'])).replace('-', u'\u2212').encode('utf-8')
 
 crypto_ticker = "Die aktuellen Cryptopreise: Bitcoin: " + btcUSD + " $ (" + btcEUR + " €); " + btc24h + " % || Ethereum: " + ethUSD + " $ (" + ethEUR + " €); " + eth24h + " % || Stellar: " + xlmUSD + " $ (" + xlmEUR + " €); " + xlm24h + " % || Litecoin: " + ltcUSD + " $ (" + ltcEUR + " €); " + ltc24h + " %"
 
