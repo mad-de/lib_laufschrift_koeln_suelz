@@ -153,6 +153,12 @@ def return_command_array():
                 )
     json_weather = json.loads(json_weather_url.read())
 
+    # Radioparadise
+    rp_json_url = \
+        urlopen('https://api.radioparadise.com/api/now_playing?chan=0'
+                )
+    json_rp = json.loads(rp_json_url.read())
+       
     # NEWS
 
     json_news_url = \
@@ -219,6 +225,8 @@ def return_command_array():
 #        'Bleibt auf Abstand und bleibt gesund!',
 #	'Zufälliger Katzenfakt: ' + return_return_random_cat_facts(),
 #        newsticker,
+        'Gerade spielt: ' + str(json_rp[u'title'].encode('utf-8'))
+	    ,	    
         'Das Wetter: ' + str(json_weather[u'weather'][0][u'description'
                              ].encode('utf-8'))
             + '. Aktuelle Temperatur: ' + str(json_weather[u'main'
