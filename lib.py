@@ -185,9 +185,9 @@ def return_command_array():
 	
     	for news_i in range(0, 10):
         	if not json_news[u'articles'][news_i][u'title'] == None:
-            	news_array.append(json_news[u'articles'
-                    ][news_i][u'title'] + '. ' + json_news[u'articles'
-                    ][news_i][u'description'])
+            		news_array.append(json_news[u'articles'
+                    	][news_i][u'title'] + '. ' + json_news[u'articles'
+                    	][news_i][u'description'])
 
     	newsticker = newsticker + random.choice(news_array).encode('utf-8')
 
@@ -218,7 +218,6 @@ def return_command_array():
 #        'Heute ist der ' + str(diff_days_kontaktverbot)
 #            + '. Tag der Kontakteinschränkungen in NRW und bundesweit.'
 #            ,
-#	'Zufälliger Katzenfakt: ' + return_return_random_cat_facts(),
         'Gerade läuft: ' + str(json_rp[u'title'].encode('utf-8')) 
 	    + ' von ' +  str(json_rp[u'artist'].encode('utf-8')) 
 	    + ' aus dem Album ' +  str(json_rp[u'album'].encode('utf-8')) 
@@ -235,6 +234,7 @@ def return_command_array():
 	    crypto_ticker
             ,
 	    newsticker,
+	'Zufälliger Katzenfakt: ' + return_return_random_cat_facts(),
         'Zufälliges Rezept: '
             + rezept_name
             + ' auf: https://www.rezepteplan.de/Rezepte/.rezept?0='
