@@ -205,9 +205,8 @@ def return_command_array():
 #        'Heute ist der ' + str(diff_days_kontaktverbot)
 #            + '. Tag der Kontakteinschränkungen in NRW und bundesweit.'
 #            ,
-#        'Bleibt auf Abstand und bleibt gesund!',
 #	'Zufälliger Katzenfakt: ' + return_return_random_cat_facts(),
-#        newsticker,
+        newsticker,
         'Gerade läuft: ' + str(json_rp[u'title'].encode('utf-8')) 
 	    + ' von ' +  str(json_rp[u'artist'].encode('utf-8')) 
 	    + ' aus dem Album ' +  str(json_rp[u'album'].encode('utf-8')) 
@@ -226,7 +225,7 @@ def return_command_array():
         'Zufälliges Rezept: '
             + rezept_name
             + ' auf: https://www.rezepteplan.de/Rezepte/.rezept?0='
-             + rezept_id + ' Guten Appetit!'
+             + rezept_id + '. Guten Appetit!'
             ,        ]
 
   #  random.shuffle(command_array)
