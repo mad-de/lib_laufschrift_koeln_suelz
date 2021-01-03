@@ -170,7 +170,7 @@ def return_command_array():
 
     for news_i in range(0, 5):
         if not json_news[u'articles'][news_i][u'title'] == None:
-            get_ticker = get_ticker + json_news[u'articles'
+            get_ticker = json_news[u'articles'
                     ][news_i][u'title'] + '. '
         if not json_news[u'articles'][news_i][u'description'] == None:
             get_ticker = get_ticker + json_news[u'articles'
