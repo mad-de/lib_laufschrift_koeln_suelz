@@ -221,7 +221,7 @@ def return_command_array():
 #            ,
 #        'Bleibt auf Abstand und bleibt gesund!',
 #	'Zufälliger Katzenfakt: ' + return_return_random_cat_facts(),
-        newsticker,
+#        newsticker,
         'Das Wetter: ' + str(json_weather[u'weather'][0][u'description'
                              ].encode('utf-8'))
             + '. Aktuelle Temperatur: ' + str(json_weather[u'main'
@@ -231,11 +231,11 @@ def return_command_array():
                 u'\u2212').encode('utf-8') + '\xc2\xb0C.'
 	    ,
 	    crypto_ticker
-#            ,
-#        'Was soll man nur kochen? Wie w\xc3\xa4re es mit '
-#            + rezept_name
-#            + '? Rezept unter: https://www.rezepteplan.de/Rezepte/.rezept?0='
-#             + rezept_id + ' Guten Appetit!'
+            ,
+        'Was soll man nur kochen? Wie w\xc3\xa4re es mit '
+            + rezept_name
+            + '? Rezept unter: https://www.rezepteplan.de/Rezepte/.rezept?0='
+             + rezept_id + ' Guten Appetit!'
             ,        ]
 
   #  random.shuffle(command_array)
