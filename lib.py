@@ -162,18 +162,13 @@ def return_command_array():
     # NEWS
 
     json_news_url = \
-        urlopen('http://newsapi.org/v2/top-headlines?country=de&apiKey=2d9859f0514247a596b6eb020e0a81fe'
+        urlopen('https://newsapi.org/v2/top-headlines?sources=spiegel-online&apiKey=2d9859f0514247a596b6eb020e0a81fe'
                 )
     json_news = json.loads(json_news_url.read())
     newsticker = \
-        'Newsfeed von newsapi.org: '
+        'Spiegel Nachrichten (via newsapi.org): '
 
-    corona_free_int = 0
-    for news_i in range(0, 20):
-        if not json_news[u'articles'][news_i][u'source'][u'name'] \
-            == None:
-            get_ticker = ' +++ ' + json_news[u'articles'
-                    ][news_i][u'source'][u'name'] + ': '
+    for news_i in range(0, 5):
         if not json_news[u'articles'][news_i][u'title'] == None:
             get_ticker = get_ticker + json_news[u'articles'
                     ][news_i][u'title'] + '. '
@@ -181,28 +176,16 @@ def return_command_array():
             get_ticker = get_ticker + json_news[u'articles'
                     ][news_i][u'description']
 
-	#if not (json_news[u'articles'][news_i][u'content'] == None):
-	#    get_ticker = get_ticker + json_news[u'articles'][news_i][u'content']
-
-        if not ('DER WESTEN'
-               # in get_ticker.upper() or 'AUSGANGSBESCHR' ('CORONA' in get_ticker.upper() or 'COVID'
-		in get_ticker.upper() or 'VIP'
-	       	in get_ticker.upper() or 'BUNTE'
-	       	in get_ticker.upper() or 'PROMI'
-	       #	in get_ticker.upper() or 'SARS'
-	       	in get_ticker.upper()):
-            corona_free_int = corona_free_int + 1
-            if corona_free_int < 4:
                 newsticker = newsticker + get_ticker.encode('utf-8')
 
     # Recipe
-    #rezept_url = \
-    #    urlopen('https://www.rezepteplan.de/SpeisePlan/Zuf%C3%A4lligerSpeisePlan.aspx?34=1')
-    #rezept_html = rezept_url.read()
-    #temp_html = rezept_html.split('<br /><a RecipeId=', 1)[1]
-    #rezept_id = temp_html.split(' NiceTitle=', 1)[0].rstrip('"')[1:]
-    #temp_html = temp_html.split(' NiceTitle=', 1)[1]
-    #rezept_name = temp_html.split(' onmouseover', 1)[0].rstrip('"')[1:]
+    rezept_url = \
+        urlopen('https://www.rezepteplan.de/SpeisePlan/Zuf%C3%A4lligerSpeisePlan.aspx?34=1')
+    rezept_html = rezept_url.read()
+    temp_html = rezept_html.split('<br /><a RecipeId=', 1)[1]
+    rezept_id = temp_html.split(' NiceTitle=', 1)[0].rstrip('"')[1:]
+    temp_html = temp_html.split(' NiceTitle=', 1)[1]
+    rezept_name = temp_html.split(' onmouseover', 1)[0].rstrip('"')[1:]
 
     # TEXTE
     # Ab hier die einzelnen Zeilen Ã€ndern / oder über "]" eine neue hinzufügen. Der Ticker aktualisiert sich nach jedem Merge automatisch.
@@ -225,7 +208,7 @@ def return_command_array():
 #        'Bleibt auf Abstand und bleibt gesund!',
 #	'Zufälliger Katzenfakt: ' + return_return_random_cat_facts(),
 #        newsticker,
-        'Gerade spielt: ' + str(json_rp[u'title'].encode('utf-8')) 
+        'Gerade läuft: ' + str(json_rp[u'title'].encode('utf-8')) 
 	    + ' von ' +  str(json_rp[u'artist'].encode('utf-8')) 
 	    + ' aus dem Album ' +  str(json_rp[u'album'].encode('utf-8')) 
 	    + ' (' +  str(json_rp[u'year'].encode('utf-8')) + ')' 
@@ -240,10 +223,10 @@ def return_command_array():
 	    ,
 	    crypto_ticker
             ,
-        'Was soll man nur kochen? Wie w\xc3\xa4re es mit '
- #           + rezept_name
-            + '? Rezept unter: https://www.rezepteplan.de/Rezepte/.rezept?0='
-  #           + rezept_id + ' Guten Appetit!'
+        'Zufälliges Rezept: '
+            + rezept_name
+            + ' auf: https://www.rezepteplan.de/Rezepte/.rezept?0='
+             + rezept_id + ' Guten Appetit!'
             ,        ]
 
   #  random.shuffle(command_array)
