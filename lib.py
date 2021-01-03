@@ -225,7 +225,10 @@ def return_command_array():
 #        'Bleibt auf Abstand und bleibt gesund!',
 #	'Zufälliger Katzenfakt: ' + return_return_random_cat_facts(),
 #        newsticker,
-        'Gerade spielt: ' + str(json_rp[u'title'].encode('utf-8'))
+        'Gerade spielt: ' + str(json_rp[u'title'].encode('utf-8')) 
+	    + ' von ' +  str(json_rp[u'artist'].encode('utf-8')) 
+	    + ' aus dem Album ' +  str(json_rp[u'album'].encode('utf-8')) 
+	    + ' (' +  str(json_rp[u'album'].encode('utf-8')) + ')' 
 	    ,	    
         'Das Wetter: ' + str(json_weather[u'weather'][0][u'description'
                              ].encode('utf-8'))
