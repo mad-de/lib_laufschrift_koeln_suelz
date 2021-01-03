@@ -6,7 +6,6 @@ import random
 import json
 from urllib import urlopen
 from requests import Request, Session
-import unicodedata
 
 # Crypto
 
@@ -44,7 +43,7 @@ else:
 
 btc24h = btc24h + str("{:.2f}".format(data[u'data'][u'BTC'][u'quote'][u'USD'][u'percent_change_24h']))
 
-crypto_ticker = "Die aktuellen Cryptopreise: Bitcoin: " + btcUSD + " $ (" + btcEUR + " {}); ".format(unicodedata.lookup("EURO SIGN")) + btc24h + " % || Ethereum: " + ethUSD + " $ (" + ethEUR + " €); " + eth24h + " %"
+crypto_ticker = "Die aktuellen Cryptopreise: Bitcoin: " + btcUSD + " $ (" + btcEUR + " \u20ac35); " + btc24h + " % || Ethereum: " + ethUSD + " $ (" + ethEUR + " €); " + eth24h + " %"
 
 # CATFACTS
 
