@@ -191,8 +191,7 @@ def return_command_array():
 
     # Recipe
     #rezept_url = \
-    #    urlopen('https://www.rezepteplan.de/SpeisePlan/Zuf%C3%A4lligerSpeisePlan.aspx?34=1'
-                )
+    #    urlopen('https://www.rezepteplan.de/SpeisePlan/Zuf%C3%A4lligerSpeisePlan.aspx?34=1')
     #rezept_html = rezept_url.read()
     #temp_html = rezept_html.split('<br /><a RecipeId=', 1)[1]
     #rezept_id = temp_html.split(' NiceTitle=', 1)[0].rstrip('"')[1:]
