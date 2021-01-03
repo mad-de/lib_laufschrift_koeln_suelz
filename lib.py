@@ -162,7 +162,7 @@ def return_command_array():
                 )
     json_news = json.loads(json_news_url.read())
     newsticker = \
-        'Der Coronavirus-freie Newsfeed mit Material von newsapi.org: '
+        'Newsfeed von newsapi.org: '
 
     corona_free_int = 0
     for news_i in range(0, 20):
