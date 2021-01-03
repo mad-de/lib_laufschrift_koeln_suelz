@@ -11,7 +11,7 @@ from requests import Request, Session
 
 url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest'
 parameters = {
-  'symbol':'BTC,ETH,EURS',
+  'symbol':'LTC,BTC,ETH,EURS',
   'convert':'USD'
 }
 headers = {
@@ -38,10 +38,25 @@ if data[u'data'][u'BTC'][u'quote'][u'USD'][u'percent_change_24h'] > 0:
  btc24h = "+"
 else:
   btc24h = ""
-
 btc24h = btc24h + str("{:.2f}".format(data[u'data'][u'BTC'][u'quote'][u'USD'][u'percent_change_24h']))
 
-crypto_ticker = "Die aktuellen Cryptopreise: Bitcoin: " + btcUSD + " $ (" + btcEUR + " €); " + btc24h + " % || Ethereum: " + ethUSD + " $ (" + ethEUR + " €); " + eth24h + " %"
+ltcUSD = str("{:,.2f}".format(data[u'data'][u'LTC'][u'quote'][u'USD'][u'price']))
+ltcEUR = str("{:,.2f}".format(data[u'data'][u'LTC'][u'quote'][u'USD'][u'price'] /  data[u'data'][u'EURS'][u'quote'][u'USD'][u'price']))
+if data[u'data'][u'LTC'][u'quote'][u'USD'][u'percent_change_24h'] > 0:
+ ltc24h = "+"
+else:
+  ltc24h = ""
+ltc24h = ltc24h + str("{:.2f}".format(data[u'data'][u'LTC'][u'quote'][u'USD'][u'percent_change_24h']))
+
+xlmUSD = str("{:,.2f}".format(data[u'data'][u'XLM'][u'quote'][u'USD'][u'price']))
+xlmEUR = str("{:,.2f}".format(data[u'data'][u'XLM'][u'quote'][u'USD'][u'price'] /  data[u'data'][u'EURS'][u'quote'][u'USD'][u'price']))
+if data[u'data'][u'XLM'][u'quote'][u'USD'][u'percent_change_24h'] > 0:
+ xlm24h = "+"
+else:
+  xlm24h = ""
+xlm24h = xlm24h + str("{:.2f}".format(data[u'data'][u'XLM'][u'quote'][u'USD'][u'percent_change_24h']))
+
+crypto_ticker = "Die aktuellen Cryptopreise: Bitcoin: " + btcUSD + " $ (" + btcEUR + " €); " + btc24h + " % || Ethereum: " + ethUSD + " $ (" + ethEUR + " €); " + eth24h + " % || Stellar: " + xlmUSD + " $ (" + xlmEUR + " €); " + xlm24h + " %" || Litecoin: " + ltcUSD + " $ (" + ltcEUR + " €); " + ltc24h + " %"
 
 # CATFACTS
 
