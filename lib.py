@@ -27,26 +27,23 @@ data = json.loads(response.text)
 ethUSD = str("{:,.2f}".format(data[u'data'][u'ETH'][u'quote'][u'USD'][u'price']))
 ethEUR = str("{:,.2f}".format(data[u'data'][u'ETH'][u'quote'][u'USD'][u'price'] /  data[u'data'][u'EURS'][u'quote'][u'USD'][u'price']))
 if data[u'data'][u'ETH'][u'quote'][u'USD'][u'percent_change_24h'] > 0:
- eth24h = "+"
+ eth24h = "+" + str("{:.2f}".format(data[u'data'][u'ETH'][u'quote'][u'USD'][u'percent_change_24h']))
 else:
-  eth24h = ""
-eth24h = eth24h + str("{:.2f}".format(data[u'data'][u'ETH'][u'quote'][u'USD'][u'percent_change_24h']))
+  eth24h = str("{:.2f}".format(data[u'data'][u'ETH'][u'quote'][u'USD'][u'percent_change_24h'])).replace('-', u'\u2212').encode('utf-8')
 
 btcUSD = str("{:,.2f}".format(data[u'data'][u'BTC'][u'quote'][u'USD'][u'price']))
 btcEUR = str("{:,.2f}".format(data[u'data'][u'BTC'][u'quote'][u'USD'][u'price'] /  data[u'data'][u'EURS'][u'quote'][u'USD'][u'price']))
 if data[u'data'][u'BTC'][u'quote'][u'USD'][u'percent_change_24h'] > 0:
- btc24h = "+"
+ btc24h = "+" + str("{:.2f}".format(data[u'data'][u'BTC'][u'quote'][u'USD'][u'percent_change_24h']))
 else:
-  btc24h = ""
-btc24h = btc24h + str("{:.2f}".format(data[u'data'][u'BTC'][u'quote'][u'USD'][u'percent_change_24h']))
+  btc24h = str("{:.2f}".format(data[u'data'][u'BTC'][u'quote'][u'USD'][u'percent_change_24h'])).replace('-', u'\u2212').encode('utf-8')
 
 ltcUSD = str("{:,.2f}".format(data[u'data'][u'LTC'][u'quote'][u'USD'][u'price']))
 ltcEUR = str("{:,.2f}".format(data[u'data'][u'LTC'][u'quote'][u'USD'][u'price'] /  data[u'data'][u'EURS'][u'quote'][u'USD'][u'price']))
 if data[u'data'][u'LTC'][u'quote'][u'USD'][u'percent_change_24h'] > 0:
- ltc24h = "+"
+ ltc24h = "+" + str("{:.2f}".format(data[u'data'][u'LTC'][u'quote'][u'USD'][u'percent_change_24h']))
 else:
-  ltc24h = ""
-ltc24h = ltc24h + str("{:.2f}".format(data[u'data'][u'LTC'][u'quote'][u'USD'][u'percent_change_24h']))
+  ltc24h = str("{:.2f}".format(data[u'data'][u'LTC'][u'quote'][u'USD'][u'percent_change_24h'])).replace('-', u'\u2212').encode('utf-8')
 
 xlmUSD = str("{:,.2f}".format(data[u'data'][u'XLM'][u'quote'][u'USD'][u'price']))
 xlmEUR = str("{:,.2f}".format(data[u'data'][u'XLM'][u'quote'][u'USD'][u'price'] /  data[u'data'][u'EURS'][u'quote'][u'USD'][u'price']))
