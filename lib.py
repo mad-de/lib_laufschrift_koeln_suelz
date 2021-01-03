@@ -24,8 +24,6 @@ session.headers.update(headers)
 response = session.get(url, params=parameters)
 data = json.loads(response.text)
 
-print(data)
-
 ethUSD = str("{:.2f}".format(data[u'data'][u'ETH'][u'quote'][u'USD'][u'price']))
 ethEUR = str("{:.2f}".format(data[u'data'][u'ETH'][u'quote'][u'USD'][u'price'] /  data[u'data'][u'EURS'][u'quote'][u'USD'][u'price']))
 if data[u'data'][u'ETH'][u'quote'][u'USD'][u'percent_change_24h'] > 0:
@@ -192,14 +190,14 @@ def return_command_array():
                 newsticker = newsticker + get_ticker.encode('utf-8')
 
     # Recipe
-    rezept_url = \
-        urlopen('https://www.rezepteplan.de/SpeisePlan/Zuf%C3%A4lligerSpeisePlan.aspx?34=1'
+    #rezept_url = \
+    #    urlopen('https://www.rezepteplan.de/SpeisePlan/Zuf%C3%A4lligerSpeisePlan.aspx?34=1'
                 )
-    rezept_html = rezept_url.read()
-    temp_html = rezept_html.split('<br /><a RecipeId=', 1)[1]
-    rezept_id = temp_html.split(' NiceTitle=', 1)[0].rstrip('"')[1:]
-    temp_html = temp_html.split(' NiceTitle=', 1)[1]
-    rezept_name = temp_html.split(' onmouseover', 1)[0].rstrip('"')[1:]
+    #rezept_html = rezept_url.read()
+    #temp_html = rezept_html.split('<br /><a RecipeId=', 1)[1]
+    #rezept_id = temp_html.split(' NiceTitle=', 1)[0].rstrip('"')[1:]
+    #temp_html = temp_html.split(' NiceTitle=', 1)[1]
+    #rezept_name = temp_html.split(' onmouseover', 1)[0].rstrip('"')[1:]
 
     # TEXTE
     # Ab hier die einzelnen Zeilen Ã€ndern / oder über "]" eine neue hinzufügen. Der Ticker aktualisiert sich nach jedem Merge automatisch.
@@ -232,10 +230,10 @@ def return_command_array():
 	    ,
 	    crypto_ticker
             ,
-        'Was soll man nur kochen? Wie w\xc3\xa4re es mit '
+ #       'Was soll man nur kochen? Wie w\xc3\xa4re es mit '
             + rezept_name
             + '? Rezept unter: https://www.rezepteplan.de/Rezepte/.rezept?0='
-             + rezept_id + ' Guten Appetit!'
+  #           + rezept_id + ' Guten Appetit!'
             ,        ]
 
   #  random.shuffle(command_array)
