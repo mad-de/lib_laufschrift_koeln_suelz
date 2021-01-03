@@ -230,8 +230,8 @@ def return_command_array():
 	    ,
 	    crypto_ticker
             ,
- #       'Was soll man nur kochen? Wie w\xc3\xa4re es mit '
-            + rezept_name
+        'Was soll man nur kochen? Wie w\xc3\xa4re es mit '
+ #           + rezept_name
             + '? Rezept unter: https://www.rezepteplan.de/Rezepte/.rezept?0='
   #           + rezept_id + ' Guten Appetit!'
             ,        ]
