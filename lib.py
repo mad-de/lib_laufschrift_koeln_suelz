@@ -58,7 +58,7 @@ crypto_ticker = "Die aktuellen Cryptokurse: Bitcoin: " + btcUSD + " $ (" + btcEU
 # Vaccinations
 
 import requests
-vaccination_url = requests.get('https://datawrapper.dwcdn.net/zbXpI/6/')
+vaccination_url = requests.get('https://datawrapper.dwcdn.net/zbXpI/7/')
 vaccination_html  = vaccination_url.text
 
 temp_html = vaccination_html.split('Germany,', 1)[1]
