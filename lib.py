@@ -6,6 +6,7 @@ import random
 import json
 from urllib import urlopen
 from requests import Request, Session
+import requests
 
 # Crypto
 
@@ -53,6 +54,19 @@ else:
   xlm24h = str("{:.2f}".format(data[u'data'][u'XLM'][u'quote'][u'USD'][u'percent_change_24h'])).replace('-', u'\u2212').encode('utf-8')
 
 crypto_ticker = "Die aktuellen Cryptopreise: Bitcoin: " + btcUSD + " $ (" + btcEUR + " €); " + btc24h + " % || Ethereum: " + ethUSD + " $ (" + ethEUR + " €); " + eth24h + " % || Stellar: " + xlmUSD + " $ (" + xlmEUR + " €); " + xlm24h + " % || Litecoin: " + ltcUSD + " $ (" + ltcEUR + " €); " + ltc24h + " %"
+
+# Vaccinations
+
+import requests
+vaccination_url = requests.get('https://datawrapper.dwcdn.net/zbXpI/5/')
+vaccination_html  = vaccination_url.text
+
+temp_html = vaccination_html.split('Germany,', 1)[1]
+temp_html = temp_html.split('2021,', 1)[1]
+vaccination_ger_string = temp_html.split(',', 1)[0]
+vaccination_ger_num = int(vaccination_ger_string)
+temp_html = temp_html.split(vaccination_ger_string + ',', 1)[1]
+vaccination_ger_perc = temp_html.split('\\', 1)[0]
 
 # CATFACTS
 
@@ -232,6 +246,8 @@ def return_command_array():
                 u'\u2212').encode('utf-8') + '\xc2\xb0C.'
 	    ,
 	    crypto_ticker
+            ,
+	    'Aktuelle COVID-19-Impfungen in Deutschland: ' + str("{:,}".format(vaccination_ger_num)) + ' (' + vaccination_ger_perc + ' %)'
             ,
 	    newsticker,
 	'Zufälliger Katzenfakt: ' + return_return_random_cat_facts(),
