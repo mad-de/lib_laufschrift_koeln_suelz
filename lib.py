@@ -36,7 +36,7 @@ btcEUR = str("{:,.2f}".format(data[u'data'][u'BTC'][u'quote'][u'USD'][u'price'] 
 if data[u'data'][u'BTC'][u'quote'][u'USD'][u'percent_change_24h'] > 0:
  btc24h = "+" + str("{:.2f}".format(data[u'data'][u'BTC'][u'quote'][u'USD'][u'percent_change_24h']))
 else:
-  btc24h = str("{:.2f}".format(data[u'data'][u'BTC'][u'quote'][u'USD'][u'percent_change_24h'])).replace('-', u'\u2212').encode('utf-8')
+  btc24h = str("{:.2f}".format(data[u'data'][u'BTC'][u'quote'][u'USD'][u'percent_change_24h'])).replace('-', '- ').encode('utf-8')
 
 ltcUSD = str("{:,.2f}".format(data[u'data'][u'LTC'][u'quote'][u'USD'][u'price']))
 ltcEUR = str("{:,.2f}".format(data[u'data'][u'LTC'][u'quote'][u'USD'][u'price'] /  data[u'data'][u'EURS'][u'quote'][u'USD'][u'price']))
