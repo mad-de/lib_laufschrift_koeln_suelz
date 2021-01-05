@@ -78,7 +78,7 @@ SG_stock_price = SG_stock_html.split('<span>', 1)[0]
 SG_stock_change = SG_stock_html.split('\">', 1)[1]
 SG_stock_change = SG_stock_change.split('<span>', 1)[0].replace('-', '- ').encode('utf-8')
 
-stocks = "Die Aktienkurse: Meyer-Burger: " + MB_stock_price + " € (" + MB_stock_change + " %) || Siemens-Gamesa: " + SG_stock_price + " € (" + SG_stock_change + " %)"
+stock_ticker = "Die Aktienkurse: Meyer-Burger: " + MB_stock_price + " € (" + MB_stock_change + " %) || Siemens-Gamesa: " + SG_stock_price + " € (" + SG_stock_change + " %)"
 
 # Vaccinations
 
@@ -265,6 +265,7 @@ def return_command_array():
     #
 
     command_array = [
+	    stock_ticker,
         greeting + ' Heute ist der ' + str(datetime.datetime.now().day) + '.'
             + str(datetime.datetime.now().month) + '.'
             + str(datetime.datetime.now().year) + '. Es ist '
@@ -289,8 +290,6 @@ def return_command_array():
 	    ,
 	    crypto_ticker
             ,
-	    stocks
-	    ,
 	    vaccinations
 	    ,
 	    newsticker,
