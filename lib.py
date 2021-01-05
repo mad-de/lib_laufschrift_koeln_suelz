@@ -74,7 +74,7 @@ vaccination_date = str(vaccinations_date.values.tolist()[1])
 vaccination_date = vaccination_date.split('Impfungen_bis_einschl_', 1)[1]
 vaccination_date = vaccination_date.split(')', 1)[0]
 
-vaccinations_diff = pd.read_excel('Impfquotenmonitoring.xlsx', sheet_name=2).values.tolist()
+vaccinations_diff = pd.read_excel('~/rpi-rgb-led-matrix/examples-api-use/Impfquotenmonitoring.xlsx', sheet_name=2).values.tolist()
 vaccinations_diff_dates = len(vaccinations_diff)
 vaccinations_diff = (float(vaccinations_diff[vaccinations_diff_dates-1][1]) - float(vaccinations_diff[vaccinations_diff_dates-2][1])) / float(vaccinations_diff[vaccinations_diff_dates-1][1]) * 100
 if vaccinations_diff > 0:
