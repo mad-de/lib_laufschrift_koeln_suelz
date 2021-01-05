@@ -77,7 +77,7 @@ vaccination_date_time = vaccinations_date.values.tolist()[1][2]
 vaccination_date = vaccination_date.strftime("%m.%d.%Y")
 
 
-vaccinations = "Aktuelle COVID-19-Impfungen in Deutschland: " + str("{:.0f}".format(vaccination_ger_num)) + vaccination_ger_perc + ". Stand: " + str(format(vaccination_date)) + " um " + str(format(vaccination_date_time)) + ". " + str("{:.0f}".format(vaccination_ger_diff)) + " Impfungen wurden am Vortag durchgeführt."
+vaccinations = "Aktuelle COVID-19-Impfungen in Deutschland: " + str("{:,.0f}".format(vaccination_ger_num)) + vaccination_ger_perc + ". Stand: " + str(format(vaccination_date)) + " um " + str(format(vaccination_date_time)) + ". " + str("{:.0f}".format(vaccination_ger_diff)) + " Impfungen wurden am Vortag durchgeführt."
 
 # CATFACTS
 
