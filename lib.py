@@ -265,7 +265,7 @@ def return_command_array():
     #
 
     command_array = [
-	    stock_ticker,
+	    'TEST TEST ' + stock_ticker,
         greeting + ' Heute ist der ' + str(datetime.datetime.now().day) + '.'
             + str(datetime.datetime.now().month) + '.'
             + str(datetime.datetime.now().year) + '. Es ist '
