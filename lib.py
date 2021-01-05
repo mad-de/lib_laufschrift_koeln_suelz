@@ -265,7 +265,6 @@ def return_command_array():
     #
 
     command_array = [
-	    'TEST TEST ' + stock_ticker,
         greeting + ' Heute ist der ' + str(datetime.datetime.now().day) + '.'
             + str(datetime.datetime.now().month) + '.'
             + str(datetime.datetime.now().year) + '. Es ist '
@@ -287,6 +286,8 @@ def return_command_array():
             + '\xc2\xb0C. Gef\xc3\xbchlte Temperatur: '
             + str("{:.1f}".format(json_weather[u'main'][u'feels_like'])).replace('-',
                 u'\u2212').encode('utf-8') + '\xc2\xb0C.'
+	    ,
+	    stock_ticker
 	    ,
 	    crypto_ticker
             ,
