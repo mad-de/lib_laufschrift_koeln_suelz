@@ -56,6 +56,30 @@ else:
 
 crypto_ticker = "Die aktuellen Cryptokurse: Bitcoin: " + btcUSD + " $ (" + btcEUR + " €); " + btc24h + " % || Ethereum: " + ethUSD + " $ (" + ethEUR + " €); " + eth24h + " % || Stellar: " + xlmUSD + " $ (" + xlmEUR + " €); " + xlm24h + " % || Litecoin: " + ltcUSD + " $ (" + ltcEUR + " €); " + ltc24h + " %"
 
+# Stocks
+
+MB_session = Session()
+
+MB_url = 'https://www.finanzen.net/aktien/meyer_burger-aktie'
+MB_response = MB_session.get(MB_url).text
+
+MB_stock_html = MB_response.split('<div class=\"col-xs-5 col-sm-4 text-sm-right text-nowrap\">', 1)[1]
+MB_stock_price = MB_stock_html.split('<span>', 1)[0]
+MB_stock_change = MB_stock_html.split('\">', 1)[1]
+MB_stock_change = MB_stock_change.split('<span>', 1)[0].replace('-', '- ').encode('utf-8')
+
+SG_session = Session()
+
+SG_url = 'https://www.finanzen.net/aktien/siemens_gamesa-aktie'
+SG_response = SG_session.get(SG_url).text
+
+SG_stock_html = SG_response.split('<div class=\"col-xs-5 col-sm-4 text-sm-right text-nowrap\">', 1)[1]
+SG_stock_price = SG_stock_html.split('<span>', 1)[0]
+SG_stock_change = SG_stock_html.split('\">', 1)[1]
+SG_stock_change = SG_stock_change.split('<span>', 1)[0].replace('-', '- ').encode('utf-8')
+
+stocks = "Die Aktienkurse: Meyer-Burger: " + MB_stock_price + " € (" + MB_stock_change + " %) || Siemens-Gamesa: " + SG_stock_price + " € (" + SG_stock_change + " %)"
+
 # Vaccinations
 
 url_vaccinations = 'https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquotenmonitoring.xlsx?__blob=publicationFile'
@@ -265,6 +289,8 @@ def return_command_array():
 	    ,
 	    crypto_ticker
             ,
+	    stocks
+	    ,
 	    vaccinations
 	    ,
 	    newsticker,
