@@ -243,7 +243,7 @@ def return_command_array():
 	spiegel_content = spiegel_content.split('</description>', 1)[1]
         spiegel_news_array.append(next_news_item)
 	
-   newsticker = "Spiegel News: " + spiegel_news_array[1] + " || " + spiegel_news_array[2] + " || " + spiegel_news_array[3] + " || " + spiegel_news_array[4] + " || " + spiegel_news_array[5]
+    newsticker = "Spiegel News: " + spiegel_news_array[1] + " || " + spiegel_news_array[2] + " || " + spiegel_news_array[3] + " || " + spiegel_news_array[4] + " || " + spiegel_news_array[5]
 
     # Recipe
     rezept_url = \
