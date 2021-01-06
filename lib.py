@@ -224,7 +224,7 @@ def return_command_array():
     diff_days_kontaktverbot = abs((now - beginn_kontaktverbot).days)
     now = datetime.datetime.now()
     extra_minute_zero = ""
-    if str(datetime.datetime.now().minute) < 10:
+    if datetime.datetime.now().minute < 10:
 	extra_minute_zero = "0"
    
 
