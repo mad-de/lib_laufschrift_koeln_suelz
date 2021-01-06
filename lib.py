@@ -228,22 +228,22 @@ def return_command_array():
        
     # NEWS
 
-news_url = 'https://www.spiegel.de/schlagzeilen/index.rss'
+    news_url = 'https://www.spiegel.de/schlagzeilen/index.rss'
 
-news_session = Session()
-news_response = news_session.get(news_url).text
+    news_session = Session()
+    news_response = news_session.get(news_url).text
+    
+    spiegel_content = news_response.split('<description>', 1)[1]
 
-spiegel_content = news_response.split('<description>', 1)[1]
+    spiegel_news_array = []
 
-spiegel_news_array = []
-
-while spiegel_content.find("<description>") != -1:
- next_news_item = spiegel_content.split('<description>', 1)[1]
- next_news_item = next_news_item.split('</description>', 1)[0]
- spiegel_content = spiegel_content.split('</description>', 1)[1]
- spiegel_news_array.append(next_news_item)
-
-newsticker = "Spiegel News: " + spiegel_news_array[1] + " || " + spiegel_news_array[2] + " || " + spiegel_news_array[3] + " || " + spiegel_news_array[4] + " || " + spiegel_news_array[5]
+    while spiegel_content.find("<description>") != -1:
+	   next_news_item = spiegel_content.split('<description>', 1)[1]
+           next_news_item = next_news_item.split('</description>', 1)[0]
+	   spiegel_content = spiegel_content.split('</description>', 1)[1]
+           spiegel_news_array.append(next_news_item)
+	
+   newsticker = "Spiegel News: " + spiegel_news_array[1] + " || " + spiegel_news_array[2] + " || " + spiegel_news_array[3] + " || " + spiegel_news_array[4] + " || " + spiegel_news_array[5]
 
     # Recipe
     rezept_url = \
