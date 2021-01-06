@@ -228,24 +228,22 @@ def return_command_array():
        
     # NEWS
 
-    json_news_url = \
-        urlopen('https://newsapi.org/v2/top-headlines?sources=spiegel-online&apiKey=2d9859f0514247a596b6eb020e0a81fe'
-                )
-    json_news = json.loads(json_news_url.read())
-    if json_news[u'status'] == "error":
-	newsticker = ""
-    else:
-    	newsticker = \
-        	'Spiegel News (via newsapi.org): '
-    	news_array = []
-	
-    	for news_i in range(0, 10):
-        	if not json_news[u'articles'][news_i][u'title'] == None:
-            		news_array.append(json_news[u'articles'
-                    	][news_i][u'title'] + '. ' + json_news[u'articles'
-                    	][news_i][u'description'])
+news_url = 'https://www.spiegel.de/schlagzeilen/index.rss'
 
-    	newsticker = newsticker + random.choice(news_array).encode('utf-8')
+news_session = Session()
+news_response = news_session.get(news_url).text
+
+spiegel_content = news_response.split('<description>', 1)[1]
+
+spiegel_news_array = []
+
+while spiegel_content.find("<description>") != -1:
+ next_news_item = spiegel_content.split('<description>', 1)[1]
+ next_news_item = next_news_item.split('</description>', 1)[0]
+ spiegel_content = spiegel_content.split('</description>', 1)[1]
+ spiegel_news_array.append(next_news_item)
+
+newsticker = "Spiegel News: " + spiegel_news_array[1] + " || " + spiegel_news_array[2] + " || " + spiegel_news_array[3] + " || " + spiegel_news_array[4] + " || " + spiegel_news_array[5]
 
     # Recipe
     rezept_url = \
