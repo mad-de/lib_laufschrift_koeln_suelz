@@ -223,6 +223,10 @@ def return_command_array():
 
     diff_days_kontaktverbot = abs((now - beginn_kontaktverbot).days)
     now = datetime.datetime.now()
+    extra_minute_zero = ""
+    if str(datetime.datetime.now().minute) < 10:
+	extra_minute_zero = "0"
+   
 
     # WEATHER
 
@@ -277,7 +281,7 @@ def return_command_array():
         greeting + ' Heute ist der ' + str(datetime.datetime.now().day) + '.'
             + str(datetime.datetime.now().month) + '.'
             + str(datetime.datetime.now().year) + '. Es ist '
-            + str(datetime.datetime.now().hour) + ' Uhr '
+            + str(datetime.datetime.now().hour) + ' Uhr ' + extra_minute_zero
             + str(datetime.datetime.now().minute) + '.'
             ,
 #        'Heute ist der ' + str(diff_days_kontaktverbot)
