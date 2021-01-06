@@ -238,10 +238,10 @@ def return_command_array():
     spiegel_news_array = []
 
     while spiegel_content.find("<description>") != -1:
-	   next_news_item = spiegel_content.split('<description>', 1)[1]
-           next_news_item = next_news_item.split('</description>', 1)[0]
-	   spiegel_content = spiegel_content.split('</description>', 1)[1]
-           spiegel_news_array.append(next_news_item)
+        next_news_item = spiegel_content.split('<description>', 1)[1]
+        next_news_item = next_news_item.split('</description>', 1)[0]
+	spiegel_content = spiegel_content.split('</description>', 1)[1]
+        spiegel_news_array.append(next_news_item)
 	
    newsticker = "Spiegel News: " + spiegel_news_array[1] + " || " + spiegel_news_array[2] + " || " + spiegel_news_array[3] + " || " + spiegel_news_array[4] + " || " + spiegel_news_array[5]
 
