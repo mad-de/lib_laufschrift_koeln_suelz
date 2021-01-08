@@ -81,7 +81,7 @@ SG_stock_price = SG_stock_html.split('<span>', 1)[0]
 SG_stock_change = SG_stock_html.split('\">', 1)[1]
 SG_stock_change = SG_stock_change.split('<span>', 1)[0].replace('-', '- ').encode('utf-8')
 
-stocks = "Die Aktienkurse: Meyer-Burger: " + str(format(MB_stock_price)) + " € (" + str(format(MB_stock_change)) + " %) || Siemens-Gamesa: " + str(format(SG_stock_price)) + " € (" + str(format(SG_stock_change)) + " %)"
+stock_ticker = "Die Aktienkurse: Meyer-Burger: " + str(format(MB_stock_price)) + " € (" + str(format(MB_stock_change)) + " %) || Siemens-Gamesa: " + str(format(SG_stock_price)) + " € (" + str(format(SG_stock_change)) + " %)"
 
 # Vaccinations
 url_vaccinations = 'https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquotenmonitoring.xlsx?__blob=publicationFile'
